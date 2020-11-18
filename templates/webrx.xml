@@ -1,0 +1,697 @@
+<templateSet group="webrx">
+  <template name="try" value="try{&#10;    $END$&#10;}catch(Exception e){&#10;    e.printStackTrace();&#10;}" description="try catch" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dbmysql" value="db.driver=com.mysql.jdbc.Driver&#10;db.url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&#10;db.username=root&#10;db.password=123" description="db.properties for mybatis" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="index" value="&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;utf-8&quot; %&gt;&#10;&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;title&gt;webrx-title&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;h2&gt;Hello World!&lt;/h2&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="jsp index.jsp example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="main" value="public static void main(String[] args) {&#10;    System.out.println(&quot;Hello World...&quot;);&#10;}" description="main method" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sysout" value="System.out.println($END$);" description="System.out.print" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mdbcp" value="&lt;build&gt;&#10;    &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;&#10;    &lt;testSourceDirectory&gt;src/test/java&lt;/testSourceDirectory&gt;&#10;    &lt;sourceDirectory&gt;src/main/java&lt;/sourceDirectory&gt;&#10;    &lt;!-- 处理无法加载资源配置文件 --&gt;&#10;    &lt;resources&gt;&#10;        &lt;resource&gt;&#10;        &lt;directory&gt;src/main/java&lt;/directory&gt;&#10;        &lt;includes&gt;&#10;            &lt;include&gt;**/*.xml&lt;/include&gt;&#10;        &lt;/includes&gt;&#10;        &lt;/resource&gt;&#10;        &lt;resource&gt;&#10;        &lt;directory&gt;src/main/resources&lt;/directory&gt;&#10;        &lt;includes&gt;&#10;            &lt;include&gt;**/*.xml&lt;/include&gt;&#10;            &lt;include&gt;**/*.properties&lt;/include&gt;&#10;        &lt;/includes&gt;&#10;        &lt;/resource&gt;&#10;    &lt;/resources&gt;&#10;&lt;/build&gt;" description="dbcp2 dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mdwr" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.directwebremoting&lt;/groupId&gt;&#10;    &lt;artifactId&gt;dwr&lt;/artifactId&gt;&#10;    &lt;version&gt;3.0.2-RELEASE&lt;/version&gt;&#10;&lt;/dependency&gt;" description="dwr dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mfastjson" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;&#10;    &lt;artifactId&gt;fastjson&lt;/artifactId&gt;&#10;    &lt;version&gt;1.2.33&lt;/version&gt;&#10;&lt;/dependency&gt;" description="fastjson dependency  for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mfileupload" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;&#10;    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;&#10;    &lt;version&gt;1.3.2&lt;/version&gt;&#10;&lt;/dependency&gt;" description="commons-fileupload dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjspapi" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;&#10;    &lt;version&gt;2.2&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="jsp-api dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjstl" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jstl&lt;/artifactId&gt;&#10;    &lt;version&gt;1.2&lt;/version&gt;&#10;&lt;/dependency&gt;" description="jstl dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mweb" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.0&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;&#10;    &lt;version&gt;2.2&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jstl&lt;/artifactId&gt;&#10;    &lt;version&gt;1.2&lt;/version&gt;&#10;&lt;/dependency&gt;" description="web project dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjunit" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;junit&lt;/groupId&gt;&#10;    &lt;artifactId&gt;junit&lt;/artifactId&gt;&#10;    &lt;version&gt;4.12&lt;/version&gt;&#10;    &lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="junit dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mlombok" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;    &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;    &lt;version&gt;1.16.20&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="lombok dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mmybatis" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.mybatis&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mybatis&lt;/artifactId&gt;&#10;    &lt;version&gt;3.4.5&lt;/version&gt;&#10;&lt;/dependency&gt;" description="mybatis dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mmybatis-spring" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.mybatis&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;&#10;    &lt;version&gt;1.3.1&lt;/version&gt;&#10;&lt;/dependency&gt;" description="mybatis-spring dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mmysql" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;    &lt;version&gt;5.1.45&lt;/version&gt;&#10;&lt;/dependency&gt;" description="mysql dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjedis" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;redis.clients&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jedis&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.0&lt;/version&gt;&#10;&lt;/dependency&gt;" description="jedis dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mresources" value="&lt;resources&gt;&#10;    &lt;resource&gt;&#10;    &lt;directory&gt;src/main/java&lt;/directory&gt;&#10;    &lt;includes&gt;&#10;        &lt;include&gt;**/*.xml&lt;/include&gt;&#10;    &lt;/includes&gt;&#10;    &lt;/resource&gt;&#10;    &lt;resource&gt;&#10;    &lt;directory&gt;src/main/resources&lt;/directory&gt;&#10;    &lt;includes&gt;&#10;        &lt;include&gt;**/*.xml&lt;/include&gt;&#10;        &lt;include&gt;**/*.properties&lt;/include&gt;&#10;    &lt;/includes&gt;&#10;    &lt;/resource&gt;&#10;&lt;/resources&gt;" description="pom.xml for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mbuild" value="&lt;build&gt;&#10;    &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;&#10;    &lt;testSourceDirectory&gt;src/test/java&lt;/testSourceDirectory&gt;&#10;    &lt;sourceDirectory&gt;src/main/java&lt;/sourceDirectory&gt;&#10;    &lt;!-- 处理无法加载资源配置文件 --&gt;&#10;    &lt;resources&gt;&#10;        &lt;resource&gt;&#10;        &lt;directory&gt;src/main/java&lt;/directory&gt;&#10;        &lt;includes&gt;&#10;            &lt;include&gt;**/*.xml&lt;/include&gt;&#10;            &lt;include&gt;**/*.properties&lt;/include&gt;&#10;        &lt;/includes&gt;&#10;        &lt;/resource&gt;&#10;        &lt;resource&gt;&#10;        &lt;directory&gt;src/main/resources&lt;/directory&gt;&#10;        &lt;includes&gt;&#10;            &lt;include&gt;**/*.xml&lt;/include&gt;&#10;            &lt;include&gt;**/*.properties&lt;/include&gt;&#10;        &lt;/includes&gt;&#10;        &lt;/resource&gt;&#10;    &lt;/resources&gt;&#10;&lt;/build&gt;" description="pom.xml for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mservletapi" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.0&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="servlet-api dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mspring" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;&#10;    &lt;version&gt;4.3.10.RELEASE&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="springframework dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mspringmvc" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;&#10;    &lt;version&gt;4.3.9.RELEASE&lt;/version&gt;&#10;&lt;/dependency&gt;" description="springmvc dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mstruts" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.apache.struts&lt;/groupId&gt;&#10;    &lt;artifactId&gt;struts2-core&lt;/artifactId&gt;&#10;    &lt;version&gt;2.5.13&lt;/version&gt;&#10;&lt;/dependency&gt;" description="struts dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mtomcat-plugin" value="&lt;!-- tomcat plugin --&gt;&#10;&lt;plugin&gt;&#10;    &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;&#10;    &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;&#10;    &lt;version&gt;2.2&lt;/version&gt;&#10;    &lt;configuration&gt;&#10;        &lt;url&gt;http://localhost:80/manager/text&lt;/url&gt; &lt;!-- tomcat管理路径 --&gt;&#10;        &lt;server&gt;tomcat7&lt;/server&gt; &lt;!-- 与settings.xml文件中Server的id相同 --&gt;&#10;        &lt;uriEncoding&gt;utf-8&lt;/uriEncoding&gt;&#10;        &lt;port&gt;80&lt;/port&gt;&lt;!--服务器端口号80可以省去--&gt;&#10;        &lt;path&gt;/&lt;/path&gt; &lt;!-- 应用的部署位置 --&gt;&#10;        &lt;contextReloadable&gt;true&lt;/contextReloadable&gt;&#10;        &lt;systemProperties&gt;&#10;            &lt;java.util.logging.SimpleFormatter.format&gt;[%4$s] %1$tF %1$tT %3$s %5$s %n&lt;/java.util.logging.SimpleFormatter.format&gt;&#10;        &lt;/systemProperties&gt;&#10;    &lt;/configuration&gt;&#10;    &lt;executions&gt;&#10;        &lt;execution&gt;&#10;            &lt;id&gt;tomcat-run&lt;/id&gt;&#10;            &lt;phase&gt;test&lt;/phase&gt;&#10;            &lt;goals&gt;&#10;                &lt;goal&gt;run&lt;/goal&gt;&#10;            &lt;/goals&gt;&#10;        &lt;/execution&gt;&#10;    &lt;/executions&gt;&#10;&lt;/plugin&gt;" description="tomcat-plugin for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mwar" value="&lt;!-- web项目打war文件配置 先complie 再打war--&gt;&#10;&lt;plugin&gt;&#10;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;    &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.0&lt;/version&gt;&#10;    &lt;configuration&gt;&#10;        &lt;warName&gt;${project.artifactId}&lt;/warName&gt;&#10;        &lt;warSourceExcludes&gt;**/*.js,**/*.css&lt;/warSourceExcludes&gt;&#10;        &lt;webResources&gt;&#10;            &lt;resource&gt;&#10;                &lt;directory&gt;src/main/resources&lt;/directory&gt;&#10;                &lt;targetPath&gt;WEB-INF/classes&lt;/targetPath&gt;&#10;                &lt;includes&gt;&#10;                    &lt;include&gt;**/*.properties&lt;/include&gt;&#10;                    &lt;include&gt;**/*.xml&lt;/include&gt;&#10;                &lt;/includes&gt;&#10;            &lt;/resource&gt;&#10;        &lt;/webResources&gt;&#10;    &lt;/configuration&gt;&#10;&lt;/plugin&gt;" description="maven-war-plugin for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mybatis-config" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#10;&#9;&lt;!DOCTYPE configuration&#10;&#9;&#9;PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;&#10;&#9;&#9;&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;&#10;&#9;&lt;configuration&gt;&#10;&#9;    &lt;!-- 引入数据库服务配置文件信息 --&gt;&#10;&#9;    &lt;properties resource=&quot;db.properties&quot;/&gt;&#10;        &lt;settings&gt;&#10;            &lt;setting name=&quot;logPrefix&quot; value=&quot;dao.&quot;/&gt;&#10;        &lt;/settings&gt;&#9;    &#10;&#9;    &lt;typeAliases&gt;&#10;&#9;&#9;&lt;!-- 将实体包下的类自动为别名 com.fz.entity.User  别名就是 user--&gt;&#10;&#9;&#9;&lt;package name=&quot;com.fz.entity&quot;/&gt;&#10;&#9;    &lt;/typeAliases&gt;&#10;&#9;    &lt;environments default=&quot;development&quot;&gt;&#10;&#9;&#9;&lt;environment id=&quot;development&quot;&gt;&#10;&#9;&#9;    &lt;transactionManager type=&quot;JDBC&quot;/&gt;&#10;&#9;&#9;    &lt;dataSource type=&quot;POOLED&quot;&gt;&#10;&#9;&#9;&#9;&lt;property name=&quot;driver&quot; value=&quot;${db.driver}&quot;/&gt;&#10;&#9;&#9;&#9;&lt;property name=&quot;url&quot; value=&quot;${db.url}&quot;/&gt;&#10;&#9;&#9;&#9;&lt;property name=&quot;username&quot; value=&quot;${db.username}&quot;/&gt;&#10;&#9;&#9;&#9;&lt;property name=&quot;password&quot; value=&quot;${db.password}&quot;/&gt;&#10;&#9;&#9;    &lt;/dataSource&gt;&#10;&#9;&#9;&lt;/environment&gt;&#10;&#9;    &lt;/environments&gt;&#10;&#9;    &lt;mappers&gt;&#10;&#9;&#9;&lt;!-- &lt;mapper resource=&quot;com/fz/mapper/StudentMapper.xml&quot;/&gt; --&gt;&#10;&#9;&#9;&lt;!-- &lt;mapper class=&quot;com.fz.mapper.BookMapper&quot;/&gt; --&gt;&#10;&#9;&#9;&lt;package name=&quot;com.fz.mapper&quot;/&gt;&#10;&#9;    &lt;/mappers&gt;&#10;&#9;&lt;/configuration&gt;" description="mybatis-config.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="mysql" value="String driver = &quot;com.mysql.jdbc.Driver&quot;;&#10;String url = &quot;jdbc:mysql://localhost:3306/webrx?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&amp;user=root&amp;password=root&quot;;&#10;String url = &quot;jdbc:mysql://localhost:3306/webrx?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&quot;;&#10;String uid = &quot;root&quot;;&#10;String pwd = &quot;&quot;;&#10;try {&#10;    Class.forName(driver);&#10;    Connection conn = DriverManager.getConnection(url, uid, pwd);&#10;    System.out.println(conn);&#10;} catch (Exception e) {&#10;    e.printStackTrace();&#10;}" description="mysql for jdbc example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="oracle" value="String driver = &quot;oracle.jdbc.OracleDriver&quot;;&#10;String url = &quot;jdbc:oracle:thin:@localhost:1521:ORCL&quot;;&#10;String user = &quot;system&quot;;&#10;String password = &quot;orcl&quot;;&#10;try {&#10;    Class.forName(driver);&#10;    Connection conn = DriverManager.getConnection(url,user,password);&#10;    PreparedStatement pst = conn.prepareStatement(&quot;select * from student&quot;);&#10;    ResultSet rs = pst.executeQuery();&#10;    while(rs.next()){&#10;        System.out.println(rs.getString(&quot;stuid&quot;));&#10;        System.out.println(rs.getString(2));&#10;        System.out.println(rs.getString(&quot;stuscore&quot;));&#10;    }&#10;}catch(Exception e){&#10;    e.printStackTrace();&#10;}" description="oracle for jdbc example" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="myuicompressor" value="&lt;!-- YUI Compressor Maven压缩插件 --&gt;&#10;&lt;plugin&gt;&#10;    &lt;groupId&gt;net.alchim31.maven&lt;/groupId&gt;&#10;    &lt;artifactId&gt;yuicompressor-maven-plugin&lt;/artifactId&gt;&#10;    &lt;version&gt;1.5.1&lt;/version&gt;&#10;    &lt;executions&gt;&#10;        &lt;execution&gt;&#10;            &lt;phase&gt;process-resources&lt;/phase&gt;&#10;            &lt;goals&gt;&#10;                &lt;goal&gt;compress&lt;/goal&gt;&#10;            &lt;/goals&gt;&#10;        &lt;/execution&gt;&#10;    &lt;/executions&gt;&#10;    &lt;configuration&gt;&#10;        &lt;!-- 读取js,css文件采用UTF-8编码 --&gt;&#10;        &lt;encoding&gt;UTF-8&lt;/encoding&gt;&#10;        &lt;!-- 不显示js可能的错误 --&gt;&#10;        &lt;jswarn&gt;false&lt;/jswarn&gt;&#10;        &lt;!-- 若存在已压缩的文件，会先对比源文件是否有改动  有改动便压缩，无改动就不压缩 --&gt;&#10;        &lt;force&gt;true&lt;/force&gt;&#10;        &lt;!-- 在指定的列号后插入新行 --&gt;&#10;        &lt;linebreakpos&gt;-1&lt;/linebreakpos&gt;&#10;        &lt;!-- 压缩之前先执行聚合文件操作 --&gt;&#10;        &lt;preProcessAggregates&gt;true&lt;/preProcessAggregates&gt;&#10;        &lt;!-- 压缩后保存文件后缀 有后缀 a.js  a.min.js --&gt;&#10;        &lt;nosuffix&gt;true&lt;/nosuffix&gt;&#10;        &lt;suffix&gt;.min&lt;/suffix&gt;&#10;        &lt;!-- 源目录，即需压缩的根目录 --&gt;&#10;        &lt;sourceDirectory&gt;src/main/webapp/js,src/main/webapp/css&lt;/sourceDirectory&gt;&#10;        &lt;!-- 压缩js和css文件 --&gt;&#10;        &lt;includes&gt;&#10;            &lt;include&gt;**/*.js&lt;/include&gt;&#10;            &lt;include&gt;**/*.css&lt;/include&gt;&#10;        &lt;/includes&gt;&#10;        &lt;!-- 以下目录和文件不会被压缩 --&gt;&#10;        &lt;excludes&gt;&#10;            &lt;exclude&gt;**/*.min.js&lt;/exclude&gt;&#10;            &lt;exclude&gt;**/*.min.css&lt;/exclude&gt;&#10;        &lt;/excludes&gt;&#10;    &lt;/configuration&gt;&#10;&lt;/plugin&gt;" description="yui-compressor dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="resp" value="resp.setCharacterEncoding(&quot;utf-8&quot;);&#10;resp.setContentType(&quot;text/html;charset=utf-8&quot;);&#10;PrintWriter out = resp.getWriter();&#10;out.println(&quot;&lt;!DOCTYPE html&gt;&quot;);&#10;out.println(&quot;&lt;html&gt;&quot;);&#10;out.println(&quot;&lt;head&gt;&quot;);&#10;out.println(&quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&quot;);&#10;out.println(&quot;&lt;title&gt;玉灵 QQ:7031633 Email:webrx@126.com&lt;/title&gt;&quot;);&#10;out.println(&quot;&lt;meta name=\&quot;keywords\&quot; content=\&quot;关键字\&quot;&gt;&quot;);&#10;out.println(&quot;&lt;meta name=\&quot;description\&quot; content=\&quot;简介\&quot;&gt;&quot;);&#10;out.println(&quot;&lt;/head&gt;&quot;);&#10;out.println(&quot;&lt;body&gt;&quot;);&#10;&#10;out.println(&quot;&lt;h3&gt;Hello World  中文效果&lt;/h3&gt;&quot;);&#10;&#10;out.println(&quot;&lt;/body&gt;&quot;);&#10;out.println(&quot;&lt;/html&gt;&quot;);&#10;out.flush();&#10;out.close();" description="servlet response" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="smvc" value="&lt;!-- web项目支持spring mvc 4.3.3 --&gt;&#10;&lt;servlet&gt;&#10;&#9;&lt;servlet-name&gt;mvc&lt;/servlet-name&gt;&#10;&#9;&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;&#10;&#9;&lt;init-param&gt;&#10;&#9;&#9;&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;&#10;&#9;&#9;&lt;!-- spring mvc 在启动时主动查找加载 src目录下也就是WEB-INF/classes 目录下mvc.xml --&gt;&#10;&#9;&#9;&lt;param-value&gt;classpath:mvc.xml&lt;/param-value&gt;&#10;&#9;&lt;/init-param&gt;&#10;&#9;&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&#10;&lt;/servlet&gt;&#10;&lt;servlet-mapping&gt;&#10;&#9;&lt;servlet-name&gt;mvc&lt;/servlet-name&gt;&#10;&#9;&lt;url-pattern&gt;/&lt;/url-pattern&gt;&#10;&lt;/servlet-mapping&gt;" description="web.xml springmvc servlet" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="web.xml" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;&#10;         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;&#10;         id=&quot;WebApp_ID&quot; version=&quot;3.1&quot;&gt;&#10;    &lt;display-name&gt;web&lt;/display-name&gt;&#10;    &lt;welcome-file-list&gt;&#10;        &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;&#10;        &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;&#10;    &lt;/welcome-file-list&gt;&#10;&lt;/web-app&gt;" description="servlet 3.1 for web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="spring" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;&#10;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans&#10;&#9;       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd&quot;&gt;&#10;&#10;    &lt;import resource=&quot;beans.xml&quot;/&gt;&#10;&lt;/beans&gt;" description="applicationContext.xml for springframework" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="springmvc" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:context=&quot;http://www.springframework.org/schema/context&quot; xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;&#10;       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans&#10;&#9;http://www.springframework.org/schema/beans/spring-beans-4.3.xsd&#10;&#9;http://www.springframework.org/schema/context&#10;&#9;http://www.springframework.org/schema/context/spring-context-4.3.xsd&#10;&#9;http://www.springframework.org/schema/mvc&#10;&#9;http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd&quot;&gt;&#10;&#10;    &lt;!-- 配置自动扫描的包 --&gt;&#10;    &lt;context:component-scan base-package=&quot;com.fz.controller&quot; /&gt;&#10;&#10;    &lt;!-- 在没有配置mvc:resources的时候没有问题，一旦配置了mvc:resources，注解方式的url就没有加载 --&gt;&#10;    &lt;mvc:annotation-driven&gt;&#10;        &lt;!-- 消息转换器 --&gt;&#10;        &lt;mvc:message-converters register-defaults=&quot;true&quot;&gt;&#10;            &lt;bean class=&quot;org.springframework.http.converter.StringHttpMessageConverter&quot;&gt;&#10;                &lt;property name=&quot;supportedMediaTypes&quot; value=&quot;text/html;charset=UTF-8&quot;/&gt;&#10;            &lt;/bean&gt;&#10;        &lt;/mvc:message-converters&gt;&#10;    &lt;/mvc:annotation-driven&gt;&#10;&#10;    &lt;mvc:resources mapping=&quot;/imgs/**&quot; location=&quot;/imgs/&quot;/&gt;&#10;    &lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/css/&quot;/&gt;&#10;    &lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/js/&quot;/&gt;&#10;&#10;    &lt;!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 --&gt;&#10;    &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;&#10;        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/template/&quot;&gt;&lt;/property&gt;&#10;        &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;&#10;    &lt;/bean&gt;&#10;&lt;/beans&gt;&#10;" description="springmvc.xml for springmvc" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="imgutil" value="package com.webrx;&#10;&#10;import java.awt.Color;&#10;import java.awt.Font;&#10;import java.awt.FontMetrics;&#10;import java.awt.Graphics;&#10;import java.awt.Graphics2D;&#10;import java.awt.image.BufferedImage;&#10;import java.io.File;&#10;import java.io.IOException;&#10;import java.util.Random;&#10;&#10;import javax.imageio.ImageIO;&#10;&#10;/**&#10; * &lt;p&gt;&#10; * 功能：图像文件处理（验证码、缩略图、水印文字、水印图标、裁剪图某部分）&#10; * &lt;h5&gt;2017-9-19&lt;/h5&gt;&#10; * &lt;/p&gt;&#10; * &#10; * @author webrx&#10; * @version 1.0&#10; */&#10;public class ImgUtil {&#10;&#9;private String src;&#10;&#9;private BufferedImage i;&#10;&#9;private int w;&#10;&#9;private int h;&#10;&#10;&#9;/**&#10;&#9; * &#10;&#9; */&#10;&#9;public ImgUtil() {&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * @param src&#10;&#9; */&#10;&#9;public ImgUtil(String src) {&#10;&#9;&#9;this.src = src;&#10;&#9;&#9;File f = new File(src);&#10;&#9;&#9;if (f.exists()) {&#10;&#9;&#9;&#9;try {&#10;&#9;&#9;&#9;&#9;this.i = ImageIO.read(new File(src));&#10;&#9;&#9;&#9;&#9;this.w = this.i.getWidth();&#10;&#9;&#9;&#9;&#9;this.h = this.i.getHeight();&#10;&#9;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;/**&#10;&#9; * @param alpha&#10;&#9; * @return&#10;&#9; */&#10;&#9;public Color getColor(int alpha){&#10;&#9;&#9;Random r = new Random();&#10;&#9;&#9;Color c = new Color(r.nextInt(255),r.nextInt(255),r.nextInt(255),alpha);&#10;&#9;&#9;return c;&#10;&#9;}&#10;&#9;&#10;&#9;/**&#10;&#9; * @return&#10;&#9; */&#10;&#9;public Color getColor(){&#10;&#9;&#9;Random r = new Random();&#10;&#9;&#9;Color c = new Color(r.nextInt(255),r.nextInt(255),r.nextInt(255),r.nextInt(255));&#10;&#9;&#9;return c;&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * @param text&#10;&#9; * @param fontsize&#10;&#9; * @param color&#10;&#9; * @param pos&#10;&#9; * @param flag&#10;&#9; * @param padding&#10;&#9; * @param extt&#10;&#9; */&#10;&#9;public void text(String text, int fontsize,String color, int pos, boolean flag, int padding, String extt) {&#10;&#9;&#9;Graphics2D g = (Graphics2D) this.i.getGraphics();&#10;&#9;&#9;Font font = new Font(&quot;黑体&quot;,Font.BOLD,fontsize);&#10;&#9;&#9;g.setFont(font);&#10;&#9;&#9;FontMetrics metrics = g.getFontMetrics(g.getFont()); &#10;&#9;&#9;int th = metrics.getHeight(); &#10;&#9;&#9;int tw = metrics.stringWidth(text); &#10;&#9;&#9;int x = padding;&#10;&#9;&#9;int y = padding;&#10;&#9;&#9;switch (pos) {&#10;&#9;&#9;case 1:&#10;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;y = padding+th;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 2:&#10;&#9;&#9;&#9;x = (int)((w-tw)/2);&#10;&#9;&#9;&#9;y = padding+th;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 3:&#10;&#9;&#9;&#9;x = w-tw-padding;&#10;&#9;&#9;&#9;y = padding+th;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 4:&#10;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;y = (int)((h-th)/2);&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 5:&#10;&#9;&#9;&#9;x = (int)((w-tw)/2);&#10;&#9;&#9;&#9;y = (int)((h-th)/2);&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 6:&#10;&#9;&#9;&#9;x = w-tw-padding;&#10;&#9;&#9;&#9;y = (int)((h-th)/2);&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 7:&#10;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;y = h-padding;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 8:&#10;&#9;&#9;&#9;x = (int)((w-tw)/2);&#10;&#9;&#9;&#9;y = h-padding;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;case 9:&#10;&#9;&#9;&#9;x = w-tw-padding;&#10;&#9;&#9;&#9;y = h-padding;&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;default:&#10;&#9;&#9;&#9;Random r = new Random();&#10;&#9;&#9;&#9;x = r.nextInt(w-tw-padding-padding)+padding;&#10;&#9;&#9;&#9;y = r.nextInt(h-padding-padding-th)+(padding+th);&#10;&#9;&#9;&#9;break;&#10;&#9;&#9;}&#10;&#9;&#9;if(&quot;white&quot;.equalsIgnoreCase(color)){&#10;&#9;&#9;&#9;g.setColor(new Color(255,255,255,150));&#10;&#9;&#9;}else if(&quot;black&quot;.equalsIgnoreCase(color)){&#10;&#9;&#9;&#9;g.setColor(new Color(0,0,0,150));&#9;&#9;&#9;&#10;&#9;&#9;}else{&#10;&#9;&#9;&#9;g.setColor(this.getColor());&#10;&#9;&#9;}&#10;&#9;&#9;g.drawString(text, x, y);&#10;&#9;&#9;if(flag){&#10;&#9;&#9;&#9;try {&#10;&#9;&#9;&#9;&#9;ImageIO.write(this.i, &quot;jpg&quot;, new File(this.src));&#10;&#9;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}else{&#10;&#9;&#9;&#9;try {&#10;&#9;&#9;&#9;&#9;ImageIO.write(this.i, &quot;jpg&quot;, new File(this.src.replaceAll(this.getExt(true), extt+&quot;.jpg&quot;)));&#10;&#9;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;&#9;g.dispose();&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 实现缩略图功能，ww,hh flag为true 高度按比例，fg为true覆盖原图&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @param ww&#10;&#9; * @param hh&#10;&#9; * @param flag&#10;&#9; * @param fg&#10;&#9; */&#10;&#9;public void thumb(int ww, int hh, boolean flag, boolean fg) {&#10;&#9;&#9;try {&#10;&#9;&#9;&#9;// 如果注释下边高度计算，则采用指定宽高&#10;&#9;&#9;&#9;if (flag) {&#10;&#9;&#9;&#9;&#9;hh = (int) ((double) ww / w * h);&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;// 建立指定尺寸的缓存图像&#10;&#9;&#9;&#9;BufferedImage ii = new BufferedImage(ww, hh, BufferedImage.TYPE_INT_RGB);&#10;&#9;&#9;&#9;Graphics g = ii.getGraphics();&#10;&#9;&#9;&#9;g.drawImage(this.i, 0, 0, ww, hh, null);&#10;&#9;&#9;&#9;if (fg) {&#10;&#9;&#9;&#9;&#9;ImageIO.write(ii, &quot;jpg&quot;, new File(this.src));&#10;&#9;&#9;&#9;} else {&#10;&#9;&#9;&#9;&#9;ImageIO.write(ii, &quot;jpg&quot;, new File(this.src.replaceAll(this.getExt(true), ww + &quot;_&quot; + hh + &quot;.jpg&quot;)));&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;g.dispose();&#10;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 裁剪图像某部分，如果flag为true,裁剪出的图像覆盖原图&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @param x&#10;&#9; * @param y&#10;&#9; * @param ww&#10;&#9; * @param hh&#10;&#9; * @param flag&#10;&#9; */&#10;&#9;public void crop(int x, int y, int ww, int hh, boolean flag) {&#10;&#9;&#9;try {&#10;&#9;&#9;&#9;// 建立指定尺寸的缓存图像&#10;&#9;&#9;&#9;BufferedImage ii = new BufferedImage(ww, hh, BufferedImage.TYPE_INT_RGB);&#10;&#9;&#9;&#9;Graphics g = ii.getGraphics();&#10;&#9;&#9;&#9;g.drawImage(this.i, 0, 0, ww, hh, x, y, x + ww, y + hh, null);// 裁剪图片某部分&#10;&#9;&#9;&#9;if (flag) {&#10;&#9;&#9;&#9;&#9;ImageIO.write(ii, &quot;jpg&quot;, new File(this.src));&#10;&#9;&#9;&#9;} else {&#10;&#9;&#9;&#9;&#9;ImageIO.write(ii, &quot;jpg&quot;, new File(this.src.replaceAll(this.getExt(true), ww + &quot;_&quot; + hh + &quot;.jpg&quot;)));&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;g.dispose();&#10;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#9;public void check() {&#10;&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 返回操作图像文件的扩展名，如jpg&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @return&#10;&#9; */&#10;&#9;public String getExt() {&#10;&#9;&#9;return this.getExt(false);&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 返回操作图像文件的扩展名，如参数flag 为true 返回 .jpg 为false 返回jpg不带点&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @param flag&#10;&#9; * @return&#10;&#9; */&#10;&#9;public String getExt(boolean flag) {&#10;&#9;&#9;String ext = this.src.substring(this.src.lastIndexOf(&quot;.&quot;)).toLowerCase();&#10;&#9;&#9;return flag ? ext : ext.substring(1);&#10;&#9;}&#10;&#10;&#9;public String getFileName() {&#10;&#9;&#9;String fn = null;&#10;&#9;&#9;String separator = File.separator;&#10;&#9;&#9;if (this.src.indexOf(&quot;/&quot;) != -1)&#10;&#9;&#9;&#9;separator = &quot;/&quot;;&#10;&#9;&#9;int pos = this.src.lastIndexOf(separator);&#10;&#9;&#9;if (pos != -1) {&#10;&#9;&#9;&#9;fn = this.src.substring(pos + 1).toLowerCase();&#10;&#9;&#9;}&#10;&#9;&#9;return fn;&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 功能：&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @param sourcefile&#10;&#9; * @param logofile&#10;&#9; */&#10;&#9;public void logo(String logofile) {&#10;&#9;&#9;this.logo(logofile, 5, true, 15, &quot;_logo&quot;);&#10;&#9;}&#10;&#10;&#9;/**&#10;&#9; * &lt;p&gt;&#10;&#9; * 功能：&#10;&#9; * &lt;/p&gt;&#10;&#9; * &#10;&#9; * @param sourcefile&#10;&#9; * @param logofile&#10;&#9; * @param pos&#10;&#9; * @param flag&#10;&#9; * @param padding&#10;&#9; * @param ext&#10;&#9; */&#10;&#9;public void logo(String logofile, int pos, boolean flag, int padding, String ext) {&#10;&#9;&#9;try {&#10;&#9;&#9;&#9;BufferedImage logo = ImageIO.read(new File(logofile));&#10;&#9;&#9;&#9;Graphics g = i.getGraphics();&#10;&#9;&#9;&#9;int x = padding;&#10;&#9;&#9;&#9;int y = padding;&#10;&#9;&#9;&#9;switch (pos) {&#10;&#9;&#9;&#9;case 1:&#10;&#9;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;&#9;y = padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 2:&#10;&#9;&#9;&#9;&#9;x = (int) ((i.getWidth() - logo.getWidth()) / 2);&#10;&#9;&#9;&#9;&#9;y = padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 3:&#10;&#9;&#9;&#9;&#9;x = i.getWidth() - logo.getWidth() - padding;&#10;&#9;&#9;&#9;&#9;y = padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 4:&#10;&#9;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;&#9;y = (int) ((i.getHeight() - logo.getHeight()) / 2);&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 5:&#10;&#9;&#9;&#9;&#9;x = (int) ((i.getWidth() - logo.getWidth()) / 2);&#10;&#9;&#9;&#9;&#9;y = (int) ((i.getHeight() - logo.getHeight()) / 2);&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 6:&#10;&#9;&#9;&#9;&#9;x = i.getWidth() - logo.getWidth() - padding;&#10;&#9;&#9;&#9;&#9;y = (int) ((i.getHeight() - logo.getHeight()) / 2);&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 7:&#10;&#9;&#9;&#9;&#9;x = padding;&#10;&#9;&#9;&#9;&#9;y = i.getHeight() - logo.getHeight() - padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 8:&#10;&#9;&#9;&#9;&#9;x = (int) ((i.getWidth() - logo.getWidth()) / 2);&#10;&#9;&#9;&#9;&#9;y = i.getHeight() - logo.getHeight() - padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;case 9:&#10;&#9;&#9;&#9;&#9;x = i.getWidth() - logo.getWidth() - padding;&#10;&#9;&#9;&#9;&#9;y = i.getHeight() - logo.getHeight() - padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;default:&#10;&#9;&#9;&#9;&#9;Random r = new Random();&#10;&#9;&#9;&#9;&#9;x = r.nextInt(i.getWidth() - logo.getWidth() - padding) + padding;&#10;&#9;&#9;&#9;&#9;y = r.nextInt(i.getHeight() - logo.getHeight() - padding) + padding;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;g.drawImage(logo, x, y, null);&#10;&#9;&#9;&#9;String filename = this.getFileName();&#10;&#9;&#9;&#9;if (flag) {&#10;&#9;&#9;&#9;&#9;ImageIO.write(i, this.getExt(), new File(this.src));&#10;&#9;&#9;&#9;} else {&#10;&#9;&#9;&#9;&#9;ImageIO.write(i, this.getExt(), new File(this.src.replaceAll(filename, filename + ext)));&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;g.dispose();&#10;&#9;&#9;} catch (IOException e) {&#10;&#9;&#9;&#9;e.printStackTrace();&#10;&#9;&#9;}&#10;&#9;}&#10;}" description="imgutil" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dbutil" value="package com.fz.util;&#10;&#10;import java.sql.*;&#10;import java.util.*;&#10;&#10;/**&#10; * Created by webrx on 2017-08-16.&#10; */&#10;public class DbUtil {&#10;    private String driver = &quot;com.mysql.jdbc.Driver&quot;; // 数据库驱动类&#10;    private String url = &quot;jdbc:mysql://localhost:3306/oadb?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&quot;;// url&#10;    private String uid = &quot;root&quot;; // 账号&#10;    private String pwd = &quot;123&quot;;// 密码&#10;    private int port = 3306;&#10;    private Connection conn = null;&#10;    private int currpage = 1;&#10;    private int pagesize = 5;&#10;    private int recordcount = 0;&#10;    private int pagecount = 0;&#10;    private String dbname = &quot;oadb&quot;;&#10;    private String host = &quot;localhost&quot;;&#10;&#10;    public void connect(String host, String user, String password, int port, String dbname) {&#10;        this.host = host;&#10;        this.url = url;&#10;        this.uid = user;&#10;        this.pwd = password;&#10;        this.dbname = dbname;&#10;        this.port = port;&#10;        this.url = String.format(&quot;jdbc:mysql://%s:%d/%s?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&quot;,this.host,this.port,this.dbname);&#10;        try {&#10;            Class.forName(driver);&#10;            this.conn = DriverManager.getConnection(url, uid, pwd);&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        } catch (ClassNotFoundException e) {&#10;            e.printStackTrace();&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    public String getPk(String tablename) {&#10;        String pk = null;&#10;        DatabaseMetaData dbmd;&#10;        try {&#10;            dbmd = this.conn.getMetaData();&#10;            ResultSet rs = dbmd.getPrimaryKeys(this.dbname, null, tablename);&#10;            if (rs.next()) {&#10;                pk = rs.getString(4);&#10;            }&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return pk;&#10;    }&#10;&#10;    public int add(String sql, Object[] values) {&#10;        int num = 0;&#10;        PreparedStatement pst;&#10;        try {&#10;            pst = this.conn.prepareStatement(sql);&#10;            int i = 0;&#10;            for (Object o : values) {&#10;                pst.setObject(++i, o);&#10;            }&#10;            num = pst.executeUpdate();&#10;            pst.close();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public int insert(String tablename, Map&lt;String, Object&gt; m) {&#10;        int num = 0;&#10;        StringBuilder n = new StringBuilder();&#10;        StringBuilder v = new StringBuilder();&#10;        for (String k : m.keySet()) {&#10;            v.append(&quot;?,&quot;);&#10;            n.append(k + &quot;,&quot;);&#10;        }&#10;        String sql = String.format(&quot;insert into %s(%s) values(%s)&quot;, tablename, n.toString().subSequence(0, n.length() - 1), v.toString().subSequence(0, v.length() - 1));&#10;        PreparedStatement pst;&#10;        try {&#10;            pst = this.conn.prepareStatement(sql);&#10;            int i = 0;&#10;            for (Object o : m.values()) {&#10;                pst.setObject(++i, o);&#10;            }&#10;            num = pst.executeUpdate();&#10;            pst.close();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public int deleteById(String tablename, Object id) {&#10;        int num = delete(tablename, this.getPk(tablename) + &quot;=&quot; + id);&#10;        return num;&#10;    }&#10;&#10;    public int delete(String tablename, String where) {&#10;        int num = 0;&#10;        String sql = String.format(&quot;delete from %s where %s&quot;, tablename, where);&#10;        try {&#10;            PreparedStatement pst = this.conn.prepareStatement(sql);&#10;            num = pst.executeUpdate();&#10;            pst.close();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public int delete(String tablename) {&#10;        int num = delete(tablename, &quot;1=1&quot;);&#10;        return num;&#10;    }&#10;&#10;    public Map&lt;String, Object&gt; queryById(String tablename, Object id) {&#10;        Map&lt;String, Object&gt; m = new HashMap&lt;String, Object&gt;();&#10;        String sql = String.format(&quot;select * from %s where %s&quot;, tablename, this.getPk(tablename) + &quot;='&quot; + id+&quot;'&quot;);&#10;        try {&#10;            PreparedStatement pst = this.conn.prepareStatement(sql);&#10;            ResultSet rs = pst.executeQuery();&#10;            if (rs.next()) {&#10;                ResultSetMetaData rsmd = rs.getMetaData();&#10;                int cc = rsmd.getColumnCount();&#10;                for (int i = 1; i &lt;= cc; i++) {&#10;                    String name = rsmd.getColumnLabel(i);&#10;                    m.put(name, rs.getObject(name));&#10;                }&#10;            }&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return m;&#10;    }&#10;&#10;    public int update(String tablename, Map&lt;String, Object&gt; m) {&#10;        int num = 0;&#10;        String pk = this.getPk(tablename);&#10;        if (m.containsKey(pk)) {&#10;            num = update(tablename, m, pk + &quot;='&quot; + m.get(pk)+&quot;'&quot;);&#10;        } else {&#10;            num = update(tablename, m, &quot;1=1&quot;);&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public int update(String tablename, Map&lt;String, Object&gt; m, String where) {&#10;        int num = 0;&#10;        StringBuilder s = new StringBuilder();&#10;        for (String k : m.keySet()) {&#10;            s.append(k + &quot;=?,&quot;);&#10;        }&#10;        String sql = String.format(&quot;update %s set %s where %s&quot;, tablename, s.toString().subSequence(0, s.length() - 1), where);&#10;        PreparedStatement pst;&#10;        try {&#10;            pst = this.conn.prepareStatement(sql);&#10;            int i = 0;&#10;            for (Object o : m.values()) {&#10;                pst.setObject(++i, o);&#10;            }&#10;            num = pst.executeUpdate();&#10;            pst.close();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public void close() {&#10;        if (this.conn != null) {&#10;            try {&#10;                this.conn.close();&#10;            } catch (SQLException e) {&#10;                e.printStackTrace();&#10;            }&#10;        }&#10;    }&#10;&#10;    public int getCurrpage() {&#10;        return currpage;&#10;    }&#10;&#10;    public void setCurrpage(int currpage) {&#10;        this.currpage = currpage;&#10;    }&#10;&#10;    public int getPagesize() {&#10;        return pagesize;&#10;    }&#10;&#10;    public void setPagesize(int pagesize) {&#10;        this.pagesize = pagesize;&#10;    }&#10;&#10;    public int getRecordcount() {&#10;        return recordcount;&#10;    }&#10;&#10;    public void setRecordcount(int recordcount) {&#10;        this.recordcount = recordcount;&#10;    }&#10;&#10;    public int getPagecount() {&#10;        return pagecount;&#10;    }&#10;&#10;    public void setPagecount(int pagecount) {&#10;        this.pagecount = pagecount;&#10;    }&#10;&#10;    /**&#10;     * host localhost&#10;     * user root&#10;     * pwd  123&#10;     * port 3306&#10;     */&#10;    public DbUtil() {&#10;        try {&#10;            Properties pro = new Properties();&#10;            pro.load(DbUtil.class.getClassLoader().getResourceAsStream(&quot;db.properties&quot;));&#10;            this.driver = pro.getProperty(&quot;db.driver&quot;);&#10;            Class.forName(this.driver);&#10;            this.url = pro.getProperty(&quot;db.url&quot;);&#10;            this.uid = pro.getProperty(&quot;db.user&quot;);&#10;            this.pwd = pro.getProperty(&quot;db.password&quot;);&#10;            this.conn = DriverManager.getConnection(this.url, this.uid, this.pwd);&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        } catch (ClassNotFoundException e) {&#10;            e.printStackTrace();&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    public DbUtil(String host,String user,String password,String dbname) {&#10;        this.host = host;&#10;        this.uid = user;&#10;        this.pwd = password;&#10;        this.url = String.format(&quot;jdbc:mysql://%s:3306/%s?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&quot;,this.host,this.dbname);&#10;        try {&#10;            Class.forName(driver);&#10;            this.conn = DriverManager.getConnection(url, uid, pwd);&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        } catch (ClassNotFoundException e) {&#10;            e.printStackTrace();&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    public Connection getConn() {&#10;        return this.conn;&#10;    }&#10;&#10;    public int count(String tablename, String where) {&#10;        int num = 0;&#10;        String sql = String.format(&quot;select count(*) from %s where %s&quot;, tablename, where);&#10;        try {&#10;            PreparedStatement pst = this.conn.prepareStatement(sql);&#10;            ResultSet rs = pst.executeQuery();&#10;            if (rs.next()) {&#10;                num = rs.getInt(1);&#10;            }&#10;            rs.close();&#10;            pst.close();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return num;&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; query(String tablename, String field) {&#10;        return query(tablename, field, &quot;1=1&quot;, &quot;&quot;);&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; query(String tablename) {&#10;        return query(tablename, &quot;*&quot;, &quot;1=1&quot;, &quot;&quot;);&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; query(String tablename, String field, String where, String order) {&#10;        List&lt;Map&lt;String, Object&gt;&gt; list = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();&#10;        String sql = String.format(&quot;select %s from %s where %s %s&quot;, field, tablename, where, order);&#10;        PreparedStatement pst;&#10;        try {&#10;            pst = this.conn.prepareStatement(sql);&#10;            ResultSet rs = pst.executeQuery();&#10;            ResultSetMetaData rsmd = rs.getMetaData();&#10;            while (rs.next()) {&#10;                Map&lt;String, Object&gt; m = new HashMap&lt;String, Object&gt;();&#10;                int cc = rsmd.getColumnCount();&#10;                for (int i = 1; i &lt;= cc; i++) {&#10;                    String name = rsmd.getColumnLabel(i);&#10;                    m.put(name, rs.getObject(name));&#10;                }&#10;                list.add(m);&#10;            }&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return list;&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; page(int currpage, String tablename, String where, String order) {&#10;        return page(currpage, tablename, &quot;*&quot;, where, order);&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; page(int currpage, String tablename, String order) {&#10;        return page(currpage, tablename, &quot;*&quot;, &quot;where 1=1&quot;, order);&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; page(int currpage, String tablename) {&#10;        return page(currpage, tablename, &quot;*&quot;, &quot;where 1=1&quot;, &quot;&quot;);&#10;    }&#10;&#10;    public List&lt;Map&lt;String, Object&gt;&gt; page(int currpage, String tablename, String fields, String where, String order) {&#10;        this.currpage = currpage;&#10;        List&lt;Map&lt;String, Object&gt;&gt; list = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();&#10;        String sql = String.format(&quot;select %s from %s %s %s limit ?,?&quot;, fields, tablename, where, order);&#10;        String qqq = String.format(&quot;select count(*) c from %s %s&quot;, tablename, where);&#10;        try {&#10;            // 分页信息&#10;            PreparedStatement qpst = this.conn.prepareStatement(qqq);&#10;            ResultSet qrs = qpst.executeQuery();&#10;            if (qrs.next()) {&#10;                this.recordcount = qrs.getInt(&quot;c&quot;);&#10;                this.pagecount = this.recordcount % this.pagesize == 0 ? this.recordcount / this.pagesize : this.recordcount / this.pagesize + 1;&#10;            }&#10;            if (this.currpage &lt; 1)&#10;                this.currpage = 1;&#10;            if (this.currpage &gt; this.pagecount)&#10;                this.currpage = this.pagecount;&#10;&#10;            // 分页结果信息&#10;            PreparedStatement pst = this.conn.prepareStatement(sql);&#10;            pst.setInt(1, this.currpage * this.pagesize - this.pagesize);&#10;            pst.setInt(2, this.pagesize);&#10;            ResultSet rs = pst.executeQuery();&#10;            ResultSetMetaData rsmd = rs.getMetaData();&#10;            while (rs.next()) {&#10;                Map&lt;String, Object&gt; m = new HashMap&lt;String, Object&gt;();&#10;                int cc = rsmd.getColumnCount();&#10;                for (int i = 1; i &lt;= cc; i++) {&#10;                    String name = rsmd.getColumnLabel(i);&#10;                    m.put(name, rs.getObject(name));&#10;                }&#10;                list.add(m);&#10;            }&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return list;&#10;    }&#10;&#10;    public String pagebootstrap() {&#10;        StringBuilder s = new StringBuilder();&#10;        s.append(&quot;&lt;ul class=\&quot;pagination\&quot;&gt;&quot;);&#10;        int start = 1;&#10;        int end = 10;&#10;&#10;        if (this.currpage &gt;= 7) {&#10;            start = this.currpage - 5;&#10;            end = this.currpage + 4;&#10;        }&#10;        if (this.currpage != 1) {&#10;            s.append(String.format(&quot;&lt;li&gt;&lt;a class=\&quot;prev\&quot; href=\&quot;?p=%d\&quot;&gt;上一页&lt;/a&gt;&lt;/li&gt;&quot;, this.currpage - 1));&#10;        }&#10;        for (int i = start; i &lt;= end; i++) {&#10;            if (i &gt; this.pagecount)&#10;                break;&#10;            if (this.currpage == i) {&#10;                s.append(String.format(&quot;&lt;li class=\&quot;active\&quot;&gt;&lt;a href=\&quot;javascript:void(0)\&quot;&gt;%d&lt;/a&gt;&lt;/li&gt;&quot;, i));&#10;                continue;&#10;            }&#10;            s.append(String.format(&quot;&lt;li&gt;&lt;a href=\&quot;?p=%d\&quot;&gt;%d&lt;/a&gt;&lt;/li&gt;&quot;, i, i));&#10;        }&#10;        if (this.currpage &lt; this.pagecount) {&#10;            s.append(String.format(&quot;&lt;li&gt;&lt;a class=\&quot;next\&quot; href=\&quot;?p=%d\&quot;&gt;下一页&lt;/a&gt;&lt;/li&gt;&quot;, this.currpage + 1));&#10;        }&#10;        s.append(&quot;&lt;/ul&gt;&quot;);&#10;        return s.toString();&#10;    }&#10;&#10;    public String pageinfo() {&#10;        StringBuilder s = new StringBuilder();&#10;        s.append(&quot;&lt;div class=\&quot;page\&quot;&gt;&quot;);&#10;        int start = 1;&#10;        int end = 10;&#10;&#10;        if (this.currpage &gt;= 7) {&#10;            start = this.currpage - 5;&#10;            end = this.currpage + 4;&#10;        }&#10;        if (this.currpage != 1) {&#10;            s.append(String.format(&quot;&lt;a class=\&quot;prev\&quot; href=\&quot;?p=%d\&quot;&gt;上一页&lt;/a&gt;&quot;, this.currpage - 1));&#10;        }&#10;        for (int i = start; i &lt;= end; i++) {&#10;            if (i &gt; this.pagecount)&#10;                break;&#10;            if (this.currpage == i) {&#10;                s.append(String.format(&quot;&lt;span&gt;%d&lt;/span&gt;&quot;, i));&#10;                continue;&#10;            }&#10;            s.append(String.format(&quot;&lt;a href=\&quot;?p=%d\&quot;&gt;%d&lt;/a&gt;&quot;, i, i));&#10;        }&#10;        if (this.currpage &lt; this.pagecount) {&#10;            s.append(String.format(&quot;&lt;a class=\&quot;next\&quot; href=\&quot;?p=%d\&quot;&gt;下一页&lt;/a&gt;&quot;, this.currpage + 1));&#10;        }&#10;        s.append(&quot;&lt;/div&gt;&quot;);&#10;        return s.toString();&#10;    }&#10;&#10;}" description="dbutil for mysql" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ajax" value="var ajax = new XMLHttpRequest();//建立ajax 对象&#10;//onreadystatechange&#10;ajax.onreadystatechange = function(){&#10;    if(ajax.status==200 &amp;&amp; ajax.readyState==4){&#10;        $('ss').innerHTML = ajax.responseText;&#10;    }&#10;}&#10;function sst() {&#10;    //ajax get请求方式&#10;    //ajax.open('GET','timer.do',true);&#10;    //ajax.send(null);&#10;&#10;    //ajax post请求方式&#10;    ajax.open('post','timer.do',true);&#10;    ajax.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);&#10;    ajax.send(null);&#10;}&#10;sst();&#10;setInterval(sst,1000);" description="ajax for javascript code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$ajax" value="$.ajax({&#10;    type:'POST',&#10;    url:'show',&#10;    data:{key:value},&#10;    cache:false,&#10;    async:true,&#10;    success:function(d){&#10;        &#10;    }&#10;});" description="$.ajax() for jquery" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="hbcfg" value="&lt;?xml version='1.0' encoding='utf-8'?&gt;&#10;&lt;!DOCTYPE hibernate-configuration PUBLIC&#10;        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;&#10;        &quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&gt;&#10;&lt;hibernate-configuration&gt;&#10;    &lt;session-factory&gt;&#10;        &lt;!-- 数据库方言 --&gt;&#10;        &lt;property name=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQL57Dialect&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.url&quot;&gt;jdbc:mysql://localhost:3306/db?useSSL=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf8&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.username&quot;&gt;root&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.password&quot;&gt;fz&lt;/property&gt;&#10;        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;update&lt;/property&gt;&#10;        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;&#10;        &lt;property name=&quot;format_sql&quot;&gt;true&lt;/property&gt;&#10;        &lt;mapping resource=&quot;com/fz/entity/Student.hbm.xml&quot; /&gt;&#10;    &lt;/session-factory&gt;&#10;&lt;/hibernate-configuration&gt;" description="hibernate.cfg.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="hbm" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;!DOCTYPE hibernate-mapping PUBLIC&#10;        &quot;-//Hibernate/Hibernate Mapping DTD 3.0//EN&quot;&#10;        &quot;http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&gt;&#10;&lt;hibernate-mapping&gt;&#10;    &lt;class name=&quot;com.fz.entity.Student&quot;&gt;&#10;        &lt;id name=&quot;id&quot;&gt;&#10;            &lt;generator class=&quot;native&quot;/&gt;&#10;        &lt;/id&gt;&#10;        &lt;property name=&quot;name&quot; length=&quot;10&quot; type=&quot;string&quot;/&gt;&#10;        &lt;property name=&quot;age&quot; type=&quot;int&quot;/&gt;&#10;    &lt;/class&gt;&#10;&lt;/hibernate-mapping&gt;" description="hibernate entity hbm" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="mhb" value="&lt;!--hibernate 5.2.12--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.hibernate&lt;/groupId&gt;&#10;            &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;&#10;            &lt;version&gt;5.2.12.Final&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--mysql jdbc 5.1.44--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;            &lt;version&gt;5.1.44&lt;/version&gt;&#10;        &lt;/dependency&gt;" description="hibernate 5.2.12  mysql for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="moracle" value="&lt;!-- oracle jdbc --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;oracle&lt;/groupId&gt;&#10;    &lt;artifactId&gt;ojdbc14&lt;/artifactId&gt;&#10;    &lt;version&gt;10.2.0.4&lt;/version&gt;&#10;&lt;/dependency&gt;" description="oracle 11g jdbc dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="struts" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#10;&lt;!DOCTYPE struts PUBLIC&#10;        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.5//EN&quot;&#10;        &quot;http://struts.apache.org/dtds/struts-2.5.dtd&quot;&gt;&#10;&lt;struts&gt;&#10;    &lt;constant name=&quot;struts.i18n.reload&quot; value=&quot;true&quot; /&gt;&#10;    &lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot; /&gt;&#10;    &lt;constant name=&quot;struts.devMode&quot; value=&quot;true&quot; /&gt;&#10;    &lt;constant name=&quot;struts.configuration.xml.reload&quot; value=&quot;true&quot; /&gt;&#10;    &lt;constant name=&quot;struts.custom.i18n.resources&quot; value=&quot;res&quot; /&gt;&#10;    &lt;constant name=&quot;struts.action.extension&quot; value=&quot;action,,&quot; /&gt;&#10;&#10;    &lt;package name=&quot;default&quot; namespace=&quot;/&quot; extends=&quot;struts-default&quot;&gt;&#10;&#10;    &lt;/package&gt;&#10;&lt;/struts&gt;" description="struts.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="webstruts" value="    &lt;!-- 配置使web项目支持struts 2.5.13 过滤器 --&gt;&#10;    &lt;filter&gt;&#10;        &lt;filter-name&gt;struts&lt;/filter-name&gt;&#10;        &lt;filter-class&gt;org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;&#10;    &lt;/filter&gt;&#10;    &lt;filter-mapping&gt;&#10;        &lt;filter-name&gt;struts&lt;/filter-name&gt;&#10;        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&#10;    &lt;/filter-mapping&gt;&#10;" description="struts filter for web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="jsp" value="&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;utf-8&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh-CN&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;title&gt;jsp-title&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="jsp example file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="sqlsession" value="InputStream is = null;&#10;try {&#10;    is = Resources.getResourceAsStream(&quot;conf.xml&quot;);&#10;} catch (IOException e) {&#10;    e.printStackTrace();&#10;}&#10;SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(is);&#10;SqlSession s = sf.openSession();" description="SqlSession for Mybatis" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mybatis-mapper" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&#10;&lt;!DOCTYPE mapper&#10;        PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;&#10;        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;&#10;&lt;mapper namespace=&quot;com.fz.mapper.StudentMapper&quot;&gt;&#10;    &lt;select id=&quot;query&quot; resultType=&quot;com.fz.entity.Student&quot;&gt;&#10;        select * from student&#10;    &lt;/select&gt;&#10;&#10;    &lt;select id=&quot;queryLike&quot; resultType=&quot;student&quot;&gt;&#10;        select * from student where name like #{nnn}&#10;    &lt;/select&gt;&#10;&#10;    &lt;delete id=&quot;delById&quot; statementType=&quot;PREPARED&quot; parameterType=&quot;int&quot;&gt;&#10;        delete from student where id=#{id}&#10;    &lt;/delete&gt;&#10;&#10;    &lt;select id=&quot;queryById&quot; resultType=&quot;com.fz.entity.Student&quot; parameterType=&quot;int&quot; statementType=&quot;PREPARED&quot;&gt;&#10;        select * from student where id=#{id}&#10;    &lt;/select&gt;&#10;&#10;    &lt;update id=&quot;update&quot; parameterType=&quot;com.fz.entity.Student&quot; statementType=&quot;PREPARED&quot;&gt;&#10;        update student set name=#{name},age=#{age} where id=#{id}&#10;    &lt;/update&gt;&#10;&#10;    &lt;insert id=&quot;add&quot; parameterType=&quot;com.fz.entity.Student&quot; statementType=&quot;PREPARED&quot;&gt;&#10;        insert into student(name,age) values(#{name},#{age})&#10;    &lt;/insert&gt;&#10;&#10;    &lt;insert id=&quot;save&quot;&gt;&#10;        insert into student values(null,#{name},#{age})&#10;    &lt;/insert&gt;&#10;&lt;/mapper&gt;" description="Object Mapper Xml for Mybatis" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="sdf" value="SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);" description="new SimpleDateFormat(格式化日期)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dbmysql8" value="db.driver=com.mysql.cj.jdbc.Driver&#10;#db.url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Hongkong&#10;db.url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&#10;#db.url=jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=PRC&#10;db.username=root&#10;db.password=" description="jdbc mysql8.08dmr driver properties" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="mybatisdemo" value="public class Demo {&#10;    protected SqlSession session = null;&#10;    @Before&#10;    public void init() {&#10;        InputStream is = null;&#10;        try {&#10;            is = Resources.getResourceAsStream(&quot;mybatis-config.xml&quot;);&#10;        } catch (IOException e) {&#10;            e.printStackTrace();&#10;        }&#10;        SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(is);&#10;        this.session = sf.openSession();&#10;    }&#10;&#10;    @After&#10;    public void close() {&#10;        session.commit();&#10;        session.close();&#10;    }&#10;    @Test&#10;    public void query() {&#10;    }&#10;}" description="mybatis demo java code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mlogback" value="&lt;!-- logback-classic1.2.3 logback-core1.2.3 slf4j-api1.7.25 --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;&#10;    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;&#10;    &lt;version&gt;1.2.3&lt;/version&gt;&#10;&lt;/dependency&gt;" description="logback dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="logback" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;configuration&gt;&#10;    &lt;!-- ch.qos.logback.core.ConsoleAppender 控制台输出 --&gt;&#10;    &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;&#10;        &lt;encoder&gt;&#10;            &lt;pattern&gt;[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n&lt;/pattern&gt;&#10;        &lt;/encoder&gt;&#10;    &lt;/appender&gt;&#10;    &lt;!-- 日志级别 --&gt;&#10;    &lt;root&gt;&#10;        &lt;level value=&quot;all&quot; /&gt;&#10;        &lt;appender-ref ref=&quot;STDOUT&quot; /&gt;&#10;    &lt;/root&gt;&#10;    &lt;logger name=&quot;dao&quot; level=&quot;DEBUG&quot;/&gt;&#10;&lt;/configuration&gt;" description="logback config xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="list" value="List&lt;Map&lt;String,Object&gt;&gt; list = new ArrayList&lt;Map&lt;String,Object&gt;&gt;();" description="new ArrayList" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="map" value="Map&lt;String,Object&gt; map = new HashMap&lt;String, Object&gt;();" description="new HashMap()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sbu" value="StringBuilder sbu = new StringBuilder();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sformat" value="String sformat = String.format(&quot;%02d&quot;,1);" description="String.format()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="msf" value="InputStream is = null;&#10;try {&#10;    is = Resources.getResourceAsStream(&quot;mybatis-config.xml&quot;);&#10;} catch (IOException e) {&#10;    e.printStackTrace();&#10;}&#10;SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(is);&#10;SqlSession session = sf.openSession();" description="new Mybatis SqlSessionFactory" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mss" value="InputStream is = null;&#10;try {&#10;    is = Resources.getResourceAsStream(&quot;mybatis-config.xml&quot;);&#10;} catch (IOException e) {&#10;    e.printStackTrace();&#10;}&#10;SqlSessionFactory sf = new SqlSessionFactoryBuilder().build(is);&#10;SqlSession session = sf.openSession();" description="new Mybatis SqlSession" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="test" value="@Test&#10;public void test(){&#10;    &#10;}" description="junit test function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="webspringmvc" value="&lt;!-- web项目支持spring mvc 4.3.3 --&gt;&#10;&lt;servlet&gt;&#10;    &lt;servlet-name&gt;mvc&lt;/servlet-name&gt;&#10;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;&#10;    &lt;init-param&gt;&#10;        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;&#10;&#10;        &lt;!-- spring mvc 在启动时主动查找加载 src目录下也就是WEB-INF/classes 目录下mvc.xml --&gt;&#10;        &lt;param-value&gt;classpath:mvc.xml&lt;/param-value&gt;&#10;    &lt;/init-param&gt;&#10;    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&#10;&lt;/servlet&gt;&#10;&lt;servlet-mapping&gt;&#10;    &lt;servlet-name&gt;mvc&lt;/servlet-name&gt;&#10;    &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;&#10;    &lt;url-pattern&gt;*.action&lt;/url-pattern&gt;&#10;&lt;/servlet-mapping&gt;" description="springmvc of web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="webspringfilter" value="&lt;!-- spring 编码过滤器 --&gt;&#10;&lt;filter&gt;&#10;    &lt;filter-name&gt;characterEncodingFilter&lt;/filter-name&gt;&#10;    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;&#10;    &lt;init-param&gt;&#10;        &lt;param-name&gt;encoding&lt;/param-name&gt;&#10;        &lt;param-value&gt;UTF-8&lt;/param-value&gt;&#10;    &lt;/init-param&gt;&#10;    &lt;init-param&gt;&#10;        &lt;param-name&gt;forceEncoding&lt;/param-name&gt;&#10;        &lt;param-value&gt;true&lt;/param-value&gt;&#10;    &lt;/init-param&gt;&#10;&lt;/filter&gt;&#10;&lt;filter-mapping&gt;&#10;    &lt;filter-name&gt;characterEncodingFilter&lt;/filter-name&gt;&#10;    &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;&#10;    &lt;url-pattern&gt;*.action&lt;/url-pattern&gt;&#10;&lt;/filter-mapping&gt;" description="spring filter for web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="msmvc" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;&#10;    &lt;version&gt;5.0.4.RELEASE&lt;/version&gt;&#10;&lt;/dependency&gt;" description="springmvc 5.0.4 dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="springfilter" value="&lt;filter&gt;&#10;    &lt;filter-name&gt;characterEncodingFilter&lt;/filter-name&gt;&#10;    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;&#10;    &lt;init-param&gt;&#10;        &lt;param-name&gt;encoding&lt;/param-name&gt;&#10;        &lt;param-value&gt;UTF-8&lt;/param-value&gt;&#10;    &lt;/init-param&gt;&#10;    &lt;init-param&gt;&#10;        &lt;param-name&gt;forceEncoding&lt;/param-name&gt;&#10;        &lt;param-value&gt;true&lt;/param-value&gt;&#10;    &lt;/init-param&gt;&#10;&lt;/filter&gt;&#10;&lt;filter-mapping&gt;&#10;    &lt;filter-name&gt;characterEncodingFilter&lt;/filter-name&gt;&#10;    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;&#10;&lt;/filter-mapping&gt;" description="web.xml spring filter" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="web4" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;&#10;         version=&quot;4.0&quot;&gt;&#10;  &lt;display-name&gt;bbs&lt;/display-name&gt;&#10;&#10;  &lt;!-- 配置web项目的web.xml文件的首页 --&gt;&#10;  &lt;welcome-file-list&gt;&#10;    &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;&#10;    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;&#10;  &lt;/welcome-file-list&gt;&#10;&lt;/web-app&gt;" description="servlet 4.0 for web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ctx" value="ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);" description="spring ctx" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="springaop" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;&#10;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;&#10;       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;&#10;       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans&#10;&#9;&#9;    http://www.springframework.org/schema/beans/spring-beans.xsd&#10;&#9;&#9;    http://www.springframework.org/schema/context&#10;&#9;&#9;    http://www.springframework.org/schema/context/spring-context.xsd&#10;&#9;&#9;    http://www.springframework.org/schema/aop&#10;&#9;&#9;    http://www.springframework.org/schema/aop/spring-aop.xsd&quot;&gt;&#10;&#10;    &lt;!-- aop注解支持 --&gt;&#10;    &lt;aop:aspectj-autoproxy/&gt;&#10;&#10;    &lt;!-- 容器bean注解支持 --&gt;&#10;    &lt;context:annotation-config/&gt;&#10;    &lt;context:component-scan base-package=&quot;com.zit.dao,com.zit.entity&quot;/&gt;&#10;&#10;&#10;&lt;/beans&gt;" description="applicationContext.xml for springframework" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="url" value="String url = &quot;jdbc:mysql://localhost:3306/db?useSSL=false&amp;serverTimezone=PRC&amp;useUnicode=true&amp;characterEncoding=utf8&quot;;&#10;url = &quot;jdbc:mysql://localhost:3306/db?user=root&amp;password=&amp;useSSL=false&amp;serverTimezone=PRC&amp;useUnicode=true&amp;characterEncoding=utf8&quot;;" description="mysql for jdbc url" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="driver" value="Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);" description="mysql for jdbc driver" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="set" value="Set&lt;String&gt; set = new HashSet&lt;String&gt;();" description="new HashSet&lt;String&gt;()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="uuid" value="String uuid = UUID.randomUUID().toString().replace(&quot;-&quot;, &quot;&quot;).toLowerCase();" description="UUID 32" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="letter" value="String letter = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;;" description="a-zA-Z0-9 for String" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sr" value="StringBuilder sr = new StringBuilder();" description="new StringBuilder()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jdkinfo" value="System.out.println(System.getProperty(&quot;java.version&quot;));//11 jdk版本号&#10;System.out.println(System.getProperty(&quot;os.name&quot;));//Windows 7&#10;System.out.println(System.getProperty(&quot;os.arch&quot;));//amd64&#10;System.out.println(System.getProperty(&quot;sun.arch.data.model&quot;)); //64&#10;System.out.println(Runtime.getRuntime().availableProcessors());//4 cpu四核&#10;Properties p=System.getProperties();//获取当前的系统属性&#10;p.list(System.out);//将属性列表输出&#10;System.out.print(&quot;CPU个数:&quot;);//Runtime.getRuntime()获取当前运行时的实例&#10;System.out.println(Runtime.getRuntime().availableProcessors());//availableProcessors()获取当前电脑CPU数量&#10;System.out.print(&quot;虚拟机内存总量:&quot;);&#10;System.out.println(Runtime.getRuntime().totalMemory());//totalMemory()获取java虚拟机中的内存总量&#10;System.out.print(&quot;虚拟机空闲内存量:&quot;);&#10;System.out.println(Runtime.getRuntime().freeMemory());//freeMemory()获取java虚拟机中的空闲内存量&#10;System.out.print(&quot;虚拟机使用最大内存量:&quot;);&#10;System.out.println(Runtime.getRuntime().maxMemory());//maxMemory()获取java虚拟机试图使用的最大内存量" description="get jdk infomation" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="el" value="\${pageContext.request} = ${pageContext.request} |取得请求对象&lt;br&gt;&#10;\${pageContext.session} = ${pageContext.session} |取得session对象&lt;br&gt;&#10;\${pageContext.request.queryString} = ${pageContext.request.queryString} |取得请求的参数字符串&lt;br&gt;&#10;\${pageContext.request.requestURL} = ${pageContext.request.requestURL} |取得请求的URL的服务器路径，但不包括请求之参数字符串&lt;br&gt;&#10;\${pageContext.request.contextPath} = ${pageContext.request.contextPath} |服务的web application的名称&lt;br&gt;&#10;\${pageContext.request.method} = ${pageContext.request.method} |取得HTTP的方法(GET、POST)&lt;br&gt;&#10;\${pageContext.request.protocol} = ${pageContext.request.protocol} |取得使用的协议(HTTP/1.1、HTTP/1.0)&lt;br&gt;&#10;\${pageContext.request.remoteUser} = ${pageContext.request.remoteUser} |取得用户名称&lt;br&gt;&#10;\${pageContext.session['new']} = ${pageContext.session['new']} |判断session是否为新的，所谓新的session，表示刚由server产生而client尚未使用&lt;br&gt;&#10;\${pageContext.session.id} = ${pageContext.session.id} |取得session的ID&lt;br&gt;&#10;\${header[&quot;User-Agent&quot;]} = ${header[&quot;User-Agent&quot;]}|用户浏览器的版本&lt;br&gt;&#10;\${header[&quot;Host&quot;]} = ${header[&quot;Host&quot;]}|IP&lt;br/&gt;&#10;\${pageContext.request.remoteAddr} = ${pageContext.request.remoteAddr} |取得用户的IP地址&lt;br&gt;&#10;\${pageContext.request.localAddr} = ${pageContext.request.localAddr} |取得服务器IP地址&lt;br&gt;&#10;\${pageContext.servletContext.serverInfo} = ${pageContext.servletContext.serverInfo}|取得主机端的服务信息&lt;br&gt;&#10;\${pageContext.request.serverPort} = ${pageContext.request.serverPort}|端口信息&lt;br&gt;&#10;\${pageContext.request.serverName} = ${pageContext.request.serverName}|服务器名称&lt;br&gt;&#10;\${pageContext.request.remoteHost} = ${pageContext.request.remoteHost}|客户机名称&lt;br&gt;" description="JSP Express Language" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="ip" value="public static long ip2long(String ip) {&#10;    String[] ipArray = ip.split(&quot;\\.&quot;);&#10;    List&lt;Long&gt; ipNums = new ArrayList&lt;Long&gt;();&#10;    for (String n : ipArray) {&#10;        ipNums.add(Long.valueOf(Long.parseLong(n.trim())));&#10;    }&#10;    long ZhongIPNumTotal = ((Long) ipNums.get(0)).longValue() * 256L * 256L * 256L + ((Long) ipNums.get(1)).longValue() * 256L * 256L + ((Long) ipNums.get(2)).longValue() * 256L + ((Long) ipNums.get(3)).longValue();&#10;    return ZhongIPNumTotal;&#10;}&#10;public static String long2ip(long ipaddr) {&#10;    long y = ipaddr % 256;&#10;    long m = (ipaddr - y) / (256 * 256 * 256);&#10;    long n = (ipaddr - 256 * 256 *256 * m - y) / (256 * 256);&#10;    long x = (ipaddr - 256 * 256 *256 * m - 256 * 256 *n - y) / 256;&#10;    return m + &quot;.&quot; + n + &quot;.&quot; + x + &quot;.&quot; + y;&#10;}" description="ipv4 long addr for java" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sha" value="/**&#10; * 返回40位16进制密文&#10; * @param str&#10; * @return&#10; */&#10;public static String sha(String str) {&#10;    StringBuilder s = new StringBuilder(40);&#10;    try {&#10;        MessageDigest md = MessageDigest.getInstance(&quot;sha&quot;);&#10;        md.update(str.getBytes());&#10;        for (byte b : md.digest()) {&#10;            String s2 = String.format(&quot;%x&quot;, b);&#10;            s.append(s2.length() == 2 ? s2 : &quot;0&quot; + s2);&#10;        }&#10;    } catch (Exception e) {&#10;        e.printStackTrace();&#10;    }&#10;    return s.toString();&#10;}" description="sha for java" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="md5" value="/**&#10; * 返回32位16进制密文&#10; * @param str&#10; * @return&#10; */&#10;public static String md5(String str) {&#10;    StringBuilder s = new StringBuilder(32);&#10;    try {&#10;        MessageDigest md = MessageDigest.getInstance(&quot;md5&quot;);&#10;        md.update(str.getBytes());&#10;        for (byte b : md.digest()) {&#10;            String s2 = String.format(&quot;%x&quot;, b);&#10;            s.append(s2.length() == 2 ? s2 : &quot;0&quot; + s2);&#10;        }&#10;    } catch (Exception e) {&#10;        e.printStackTrace();&#10;    }&#10;    return s.toString();&#10;}" description="md5 for java" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="md" value="/**&#10; * 检查密文是否正确&#10; *&#10; * @param account  账号&#10; * @param password 密码&#10; * @param passwd   32密文&#10; * @return&#10; */&#10;public static boolean checkmd(String account, String password, String passwd) {&#10;    boolean flag = false;&#10;    if (passwd.equals(md(account, password))) flag = true;&#10;    return flag;&#10;}&#10;&#10;/**&#10; * 返回32位26进制密文&#10; *&#10; * @param account&#10; * @param password&#10; * @return&#10; */&#10;public static String md(String account, String password) {&#10;    StringBuilder s = new StringBuilder(32);&#10;    String str = account + password;&#10;    String pa = md5(str);&#10;    String pb = sha(str);&#10;    s.append(pa.substring(0, 5));&#10;    s.append(pb.substring(5, 10));&#10;    s.append(pa.substring(10, 15));&#10;    s.append(pb.substring(15, 20));&#10;    s.append(pa.substring(26));&#10;    s.append(pb.substring(34));&#10;    return s.toString();&#10;}&#10;&#10;/**&#10; * 返回40位16进制密文&#10; *&#10; * @param str&#10; * @return&#10; */&#10;public static String sha(String str) {&#10;    StringBuilder s = new StringBuilder(40);&#10;    try {&#10;        MessageDigest md = MessageDigest.getInstance(&quot;sha&quot;);&#10;        md.update(str.getBytes());&#10;        for (byte b : md.digest()) {&#10;            String s2 = String.format(&quot;%x&quot;, b);&#10;            s.append(s2.length() == 2 ? s2 : &quot;0&quot; + s2);&#10;        }&#10;    } catch (Exception e) {&#10;        e.printStackTrace();&#10;    }&#10;    return s.toString();&#10;}&#10;&#10;/**&#10; * 返回32位16进制密文&#10; *&#10; * @param str&#10; * @return&#10; */&#10;public static String md5(String str) {&#10;    StringBuilder s = new StringBuilder(32);&#10;    try {&#10;        MessageDigest md = MessageDigest.getInstance(&quot;md5&quot;);&#10;        md.update(str.getBytes());&#10;        for (byte b : md.digest()) {&#10;            String s2 = String.format(&quot;%x&quot;, b);&#10;            s.append(s2.length() == 2 ? s2 : &quot;0&quot; + s2);&#10;        }&#10;    } catch (Exception e) {&#10;        e.printStackTrace();&#10;    }&#10;    return s.toString();&#10;}" description="account password md5 for java" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mc" value="&lt;plugin&gt;&#10;   &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;   &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#10;   &lt;version&gt;3.8.1&lt;/version&gt;&#10;   &lt;configuration&gt;&#10;       &lt;source&gt;12&lt;/source&gt;&#10;       &lt;target&gt;12&lt;/target&gt;&#10;       &lt;encoding&gt;UTF-8&lt;/encoding&gt;&#10;   &lt;/configuration&gt;&#10;&lt;/plugin&gt;&#10;&lt;!-- maven/conf/settins.xml 文件添加如下配置，建立的java项目默认使用java13 --&gt;&#10;&lt;profiles&gt;&#10;    &lt;profile&gt;&#10;        &lt;id&gt;jdk-13&lt;/id&gt;&#10;        &lt;activation&gt;&#10;            &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;&#10;            &lt;jdk&gt;13&lt;/jdk&gt;&#10;        &lt;/activation&gt;&#10;        &lt;properties&gt;&#10;            &lt;maven.compiler.source&gt;13&lt;/maven.compiler.source&gt;&#10;            &lt;maven.compiler.target&gt;13&lt;/maven.compiler.target&gt;&#10;            &lt;maven.compiler.compilerVersion&gt;13&lt;/maven.compiler.compilerVersion&gt;&#10;        &lt;/properties&gt;&#10;    &lt;/profile&gt;&#10;&lt;/profiles&gt;" description="maven-compiler-plugin" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mzxing" value="&lt;!-- https://mvnrepository.com/artifact/com.google.zxing/core --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.google.zxing&lt;/groupId&gt;&#10;    &lt;artifactId&gt;core&lt;/artifactId&gt;&#10;    &lt;version&gt;3.4.0&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;&lt;!-- https://mvnrepository.com/artifact/com.google.zxing/javase --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.google.zxing&lt;/groupId&gt;&#10;    &lt;artifactId&gt;javase&lt;/artifactId&gt;&#10;    &lt;version&gt;3.4.0&lt;/version&gt;&#10;&lt;/dependency&gt;" description="com.google.zxing" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mc3p0" value="&lt;!-- https://mvnrepository.com/artifact/com.mchange/c3p0 --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.mchange&lt;/groupId&gt;&#10;    &lt;artifactId&gt;c3p0&lt;/artifactId&gt;&#10;    &lt;version&gt;0.9.5.4&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="c3p0 - 0.9.5.4" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="jsoup" value="&lt;!-- https://mvnrepository.com/artifact/org.jsoup/jsoup --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;org.jsoup&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jsoup&lt;/artifactId&gt;&#10;    &lt;version&gt;1.12.1&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="jsoup-1.12.1" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mueditor" value="&lt;!-- https://mvnrepository.com/artifact/com.gitee.qdbp.thirdparty/ueditor --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.gitee.qdbp.thirdparty&lt;/groupId&gt;&#10;    &lt;artifactId&gt;ueditor&lt;/artifactId&gt;&#10;    &lt;version&gt;1.4.3.3&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="mueditor-1.4.3.3" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mhttpclient" value="&lt;!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;&#10;    &lt;artifactId&gt;httpclient&lt;/artifactId&gt;&#10;    &lt;version&gt;4.5.8&lt;/version&gt;&#10;&lt;/dependency&gt;" description="httpclient-4.5.8" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjsoup" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.jsoup&lt;/groupId&gt;&#10;    &lt;artifactId&gt;jsoup&lt;/artifactId&gt;&#10;    &lt;version&gt;1.12.1&lt;/version&gt;&#10;&lt;/dependency&gt;" description="jsoup for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mcio" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;commons-io&lt;/groupId&gt;&#10;    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;&#10;    &lt;version&gt;2.6&lt;/version&gt;&#10;&lt;/dependency&gt;" description="commons-io for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="jq" value="    &lt;script src=&quot;js/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;&#10;    &lt;script&gt;&#10;        $(function(){&#10;           $END$ &#10;        });&#10;    &lt;/script&gt;" description="jquery" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="servlet" value="&lt;servlet&gt;&#10;    &lt;servlet-name&gt;hello&lt;/servlet-name&gt;&#10;    &lt;servlet-class&gt;cn.webrx.servlet.Hello&lt;/servlet-class&gt;&#10;&lt;/servlet&gt;&#10;&lt;servlet-mapping&gt;&#10;    &lt;servlet-name&gt;hello&lt;/servlet-name&gt;&#10;    &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;&#10;&lt;/servlet-mapping&gt;" description="servlet for web.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="mmybatis plus springboot" value="&lt;!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.2&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="mybatis plus springboot" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mmybaits plus" value="&lt;!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mybatis-plus&lt;/artifactId&gt;&#10;    &lt;version&gt;3.1.2&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="mybatis plus" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjdom4j" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;dom4j&lt;/groupId&gt;&#10;    &lt;artifactId&gt;dom4j&lt;/artifactId&gt;&#10;    &lt;version&gt;1.6.1&lt;/version&gt;&#10;&lt;/dependency&gt;" description="jdom4j for maven dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="msqlite" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.xerial&lt;/groupId&gt;&#10;    &lt;artifactId&gt;sqlite-jdbc&lt;/artifactId&gt;&#10;    &lt;version&gt;3.28.0&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="sqlite-jdbc form maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mh2" value="&lt;!-- https://mvnrepository.com/artifact/com.h2database/h2 --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.h2database&lt;/groupId&gt;&#10;    &lt;artifactId&gt;h2&lt;/artifactId&gt;&#10;    &lt;version&gt;1.4.199&lt;/version&gt;&#10;    &lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;&#10;" description="H2 Database Engine for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mspringbootpom" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;    &lt;groupId&gt;org.beiyou&lt;/groupId&gt;&#10;    &lt;artifactId&gt;demo&lt;/artifactId&gt;&#10;    &lt;version&gt;1.0&lt;/version&gt;&#10;    &lt;name&gt;demo&lt;/name&gt;&#10;    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&#10;    &lt;parent&gt;&#10;        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10;        &lt;version&gt;2.1.7.RELEASE&lt;/version&gt;&#10;        &lt;relativePath/&gt;&#10;    &lt;/parent&gt;&#10;    &lt;properties&gt;&#10;        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;&#10;        &lt;java.version&gt;1.8&lt;/java.version&gt;&#10;    &lt;/properties&gt;&#10;    &lt;dependencies&gt;&#10;        &lt;!-- 实现web功能 --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;!-- 模版 --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;            &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;            &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;!-- 热部署 --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;springloaded&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.github.penggle&lt;/groupId&gt;&#10;            &lt;artifactId&gt;kaptcha&lt;/artifactId&gt;&#10;            &lt;version&gt;2.3.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.h2database&lt;/groupId&gt;&#10;            &lt;artifactId&gt;h2&lt;/artifactId&gt;&#10;            &lt;version&gt;1.4.199&lt;/version&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;&#10;    &lt;build&gt;&#10;        &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;&#10;        &lt;!-- 处理无法加载资源配置文件 --&gt;&#10;        &lt;resources&gt;&#10;            &lt;resource&gt;&#10;                &lt;directory&gt;src/main/java&lt;/directory&gt;&#10;                &lt;includes&gt;&#10;                    &lt;include&gt;**/*.xml&lt;/include&gt;&#10;                    &lt;include&gt;**/*.properties&lt;/include&gt;&#10;                &lt;/includes&gt;&#10;            &lt;/resource&gt;&#10;            &lt;resource&gt;&#10;                &lt;directory&gt;src/main/resources&lt;/directory&gt;&#10;                &lt;includes&gt;&#10;                    &lt;include&gt;**/*.xml&lt;/include&gt;&#10;                    &lt;include&gt;**/*.properties&lt;/include&gt;&#10;                &lt;/includes&gt;&#10;            &lt;/resource&gt;&#10;        &lt;/resources&gt;&#10;        &lt;plugins&gt;&#10;            &lt;!-- 打包项目 mvn clean package --&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&#10;                &lt;!-- mvn spring-boot:run 热部署启动 --&gt;&#10;                &lt;dependencies&gt;&#10;                    &lt;dependency&gt;&#10;                        &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;                        &lt;artifactId&gt;springloaded&lt;/artifactId&gt;&#10;                        &lt;version&gt;1.2.8.RELEASE&lt;/version&gt;&#10;                        &lt;scope&gt;provided&lt;/scope&gt;&#10;                    &lt;/dependency&gt;&#10;                &lt;/dependencies&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;&#10;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;    &lt;parent&gt;&#10;        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10;        &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;&#10;        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&#10;    &lt;/parent&gt;&#10;    &lt;groupId&gt;cn.webrx&lt;/groupId&gt;&#10;    &lt;artifactId&gt;demo&lt;/artifactId&gt;&#10;    &lt;version&gt;1.0&lt;/version&gt;&#10;    &lt;name&gt;demo&lt;/name&gt;&#10;    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&#10;    &lt;properties&gt;&#10;        &lt;java.version&gt;15&lt;/java.version&gt;&#10;    &lt;/properties&gt;&#10;    &lt;dependencies&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;&#10;            &lt;version&gt;2.1.3&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;scope&gt;runtime&lt;/scope&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;            &lt;scope&gt;runtime&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;            &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;            &lt;exclusions&gt;&#10;                &lt;exclusion&gt;&#10;                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;&#10;                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;&#10;                &lt;/exclusion&gt;&#10;            &lt;/exclusions&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;    &lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;&#10;" description="springbook pom.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="application.properties" value="#项目contextPath&#10;server.servlet.context-path=/spring-boot-doc&#10;#服务端口&#10;server.port=8080&#10;#session最大超时时间(分钟)，默认为30&#10;server.session-timeout=60&#10;&#10;#tomcat最大线程数，默认为200&#10;server.tomcat.max-threads=100&#10;#tomcat的URI编码&#10;server.tomcat.uri-encoding=UTF-8&#10;&#10;&#10;#spring boot从控制台打印出来的日志级别只有ERROR, WARN 还有INFO，如果你想要打印debug级别的日志&#10;#debug=true&#10;logging.level.root=INFO&#10;&#10;spring.thymeleaf.mode=LEGACYHTML5&#10;&#10;#dev tools&#10;spring.devtools.livereload.enabled=true&#10;spring.thymeleaf.cache=false&#10;spring.thymeleaf.cache-period=0&#10;spring.thymeleaf.template.cache=false&#10;&#10;# 静态文件请求匹配方式&#10;spring.mvc.static-path-pattern=/**&#10;&#10;#注意中文乱码&#10;spring.datasource.url=jdbc:mysql://localhost:3306/javadoc_db?characterEncoding=utf-8&amp;useSSL=false&#10;spring.datasource.username=root&#10;spring.datasource.password=123&#10;spring.datasource.driver-class-name=com.mysql.jdbc.Driver&#10;# Specify the DBMS&#10;spring.jpa.database = MYSQL&#10;# Show or not log for each sql query&#10;spring.jpa.show-sql = true&#10;# DDL mode. This is actually a shortcut for the &quot;hibernate.hbm2ddl.auto&quot; property. Default to &quot;create-drop&quot; when using an embedded database, &quot;none&quot; otherwise.&#10;spring.jpa.hibernate.ddl-auto = update&#10;# stripped before adding them to the entity manager)&#10;spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect" description="springboot application.properties" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="freemarkerservlet" value=" &lt;!-- freemarker模板 servlet配置 --&gt;&#10;    &lt;servlet&gt;&#10;        &lt;servlet-name&gt;freemarker&lt;/servlet-name&gt;&#10;        &lt;servlet-class&gt;freemarker.ext.servlet.FreemarkerServlet&lt;/servlet-class&gt;&#10;        &lt;init-param&gt;&#10;            &lt;param-name&gt;TemplatePath&lt;/param-name&gt;&#10;            &lt;param-value&gt;/WEB-INF/templates/&lt;/param-value&gt;&#10;        &lt;/init-param&gt;&#10;        &lt;init-param&gt;&#10;            &lt;param-name&gt;default_encoding&lt;/param-name&gt;&#10;            &lt;param-value&gt;UTF-8&lt;/param-value&gt;&#10;        &lt;/init-param&gt;&#10;        &lt;init-param&gt;&#10;            &lt;param-name&gt;number_format&lt;/param-name&gt;&#10;            &lt;!-- 保留的小数位 --&gt;&#10;            &lt;param-value&gt;0.##&lt;/param-value&gt;&#10;        &lt;/init-param&gt;&#10;        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&#10;    &lt;/servlet&gt;&#10;    &lt;servlet-mapping&gt;&#10;        &lt;servlet-name&gt;freemarker&lt;/servlet-name&gt;&#10;        &lt;url-pattern&gt;*.html&lt;/url-pattern&gt;&#10;    &lt;/servlet-mapping&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="druidutil" value="public class DruidUtil {&#10;    static DruidDataSource dataSource;&#10;&#10;    static {&#10;        Properties properties = new Properties();&#10;        try {&#10;            //src/main/resources/db.properties那个文件&#10;            properties.load(DruidUtil.class.getClassLoader().getResourceAsStream(&quot;db.properties&quot;));&#10;            dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(properties);&#10;        } catch (IOException e) {&#10;            e.printStackTrace();&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    public static Connection getConnection() {&#10;        try {&#10;            return dataSource.getConnection();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return null;&#10;&#10;    }&#10;&#10;    public static void colse() {&#10;        dataSource.close();&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mcaptcha" value="&lt;dependency&gt;&#10;        &lt;groupId&gt;com.github.whvcse&lt;/groupId&gt;&#10;        &lt;artifactId&gt;easy-captcha&lt;/artifactId&gt;&#10;        &lt;version&gt;1.6.2&lt;/version&gt;&#10;    &lt;/dependency&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mfreemarker" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.freemarker&lt;/groupId&gt;&#10;    &lt;artifactId&gt;freemarker&lt;/artifactId&gt;&#10;    &lt;version&gt;2.3.29&lt;/version&gt;&#10;&lt;/dependency&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mcommonmark" value="&lt;dependency&gt;&#10;&lt;groupId&gt;com.atlassian.commonmark&lt;/groupId&gt;&#10;&lt;artifactId&gt;commonmark&lt;/artifactId&gt;&#10;&lt;version&gt;0.13.1&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;&lt;groupId&gt;com.atlassian.commonmark&lt;/groupId&gt;&#10;&lt;artifactId&gt;commonmark-ext-heading-anchor&lt;/artifactId&gt;&#10;&lt;version&gt;0.13.1&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;&lt;dependency&gt;&#10;&lt;groupId&gt;com.atlassian.commonmark&lt;/groupId&gt;&#10;&lt;artifactId&gt;commonmark-ext-gfm-tables&lt;/artifactId&gt;&#10;&lt;version&gt;0.13.1&lt;/version&gt;&#10;&lt;/dependency&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mdruid" value="&lt;!-- https://mvnrepository.com/artifact/com.alibaba/druid --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;&#10;    &lt;artifactId&gt;druid&lt;/artifactId&gt;&#10;    &lt;version&gt;1.1.21&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mmysql8" value="&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;    &lt;version&gt;8.0.18&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="druiddbproperties" value="driverClassName=com.mysql.cj.jdbc.Driver&#10;url=jdbc:mysql://localhost:3306/wxblog?serverTimezone=PRC&#10;username=root&#10;password=&#10;filters=stat&#10;initialSize=2&#10;maxActive=300&#10;maxWait=60000" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="mybatisutil" value="/**&#10; * &lt;p&gt;功能描述: &lt;/p&gt;&#10; *&#10; * @author webrx&#10; * @version 1.0&#10; * @date 2020-01-14 13:26&#10; */&#10;public class MybatisUtil {&#10;    private static SqlSessionFactory sessionFactory = null;&#10;    /*&#10;     * 创建本地线程变量，为每一个线程独立管理一个session对象 每一个线程只有且仅有单独且唯一的一个session对象&#10;     * 加上线程变量对session进行管理，可以保证线程安全，避免多实例同时调用同一个session对象&#10;     * 每一个线程都会new一个线程变量，从而分配到自己的session对象&#10;     */&#10;    private static ThreadLocal&lt;SqlSession&gt; threadlocal = new ThreadLocal&lt;SqlSession&gt;();&#10;&#10;    // 创建sessionFactory对象，因为整个应用程序只需要一个实例对象，故用静态代码块&#10;    static {&#10;        try {&#10;            Reader reader = Resources.getResourceAsReader(&quot;mybatis-config.xml&quot;);&#10;            sessionFactory = new SqlSessionFactoryBuilder().build(reader);&#10;            reader.close();&#10;        } catch (IOException e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    /**&#10;     * 返回sessionFactory对象 工厂对象&#10;     *&#10;     * @return sessionFactory&#10;     */&#10;    public static SqlSessionFactory getSessionFactory() {&#10;        return sessionFactory;&#10;    }&#10;&#10;    /**&#10;     * 新建session会话，并把session放在线程变量中&#10;     */&#10;    private static void newSession() {&#10;        // 打开一个session会话&#10;        SqlSession session = sessionFactory.openSession();&#10;        // 将session会话保存在本线程变量中&#10;        threadlocal.set(session);&#10;    }&#10;&#10;    /**&#10;     * 返回session对象&#10;     * @return session&#10;     */&#10;    public static SqlSession getSession(){&#10;        //优先从线程变量中取session对象&#10;        SqlSession session = threadlocal.get();&#10;        //如果线程变量中的session为null，&#10;        if(session==null){&#10;            //新建session会话，并把session放在线程变量中&#10;            newSession();&#10;            //再次从线程变量中取session对象&#10;            session = threadlocal.get();&#10;        }&#10;        return session;&#10;    }&#10;&#10;    /**&#10;     * 关闭session对象，并从线程变量中删除&#10;     */&#10;    public static void closeSession(){&#10;        //读取出线程变量中session对象&#10;        SqlSession session = threadlocal.get();&#10;        //如果session对象不为空，关闭sessoin对象，并清空线程变量&#10;        if(session!=null){&#10;            session.close();&#10;            threadlocal.set(null);&#10;        }&#10;    }&#10;}" description="MybatisUtil工具类" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mmapper" value="&lt;!-- https://mvnrepository.com/artifact/tk.mybatis/mapper --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;&#10;    &lt;artifactId&gt;mapper&lt;/artifactId&gt;&#10;    &lt;version&gt;4.1.5&lt;/version&gt;&#10;&lt;/dependency&gt;" description="maven for mapper" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mpagerhelper" value="&lt;!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;&#10;    &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;&#10;    &lt;version&gt;5.1.11&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;" description="maven for pagehelper" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mjunit3" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;junit&lt;/groupId&gt;&#10;    &lt;artifactId&gt;junit&lt;/artifactId&gt;&#10;    &lt;version&gt;4.13&lt;/version&gt;&#10;    &lt;scope&gt;test&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="mjunit3" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="fis" value="try {&#10;    FileInputStream fis = new FileInputStream(&quot;d:/girl.jpg&quot;);&#10;    byte[] buf = fis.readAllBytes(); //readAllBytes() java 9 新增的方法&#10;} catch (FileNotFoundException e) {&#10;    e.printStackTrace();&#10;} catch (IOException e) {&#10;    e.printStackTrace();&#10;}" description="new FileInputStram" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="fos" value="try {&#10;    byte[] buf = new byte[1024];&#10;    FileOutputStream fos = new FileOutputStream(&quot;c:/wx.jpg&quot;);&#10;    fos.write(buf); //&#10;    fos.close();&#10;} catch (FileNotFoundException e) {&#10;    e.printStackTrace();&#10;} catch (IOException e) {&#10;    e.printStackTrace();&#10;}" description="new FileOutputStream" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dbp" value="db.driver=com.mysql.cj.jdbc.Driver&#10;db.url=jdbc:mysql://localhost:3306/db?serverTimezone=PRC&#10;db.username=root&#10;db.password=" description="db.properties for mysql8.0.18" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="page" value="/**&#10; * &lt;p&gt;功能描述: 对分页的基本数据进行一个简单的封装 &lt;/p&gt;&#10; *&#10; * @author webrx&#10; * @version 1.0&#10; * @date 2020-01-17 15:39&#10; */&#10;public class Page&lt;T&gt; {&#10;    private int pageNo = 1;//页码，默认是第一页  &#10;    private int pageSize = 15;//每页显示的记录数，默认是15  &#10;    private int totalRecord;//总记录数  &#10;    private int totalPage;//总页数  &#10;    private List&lt;T&gt; results;//对应的当前页记录  &#10;    private Map&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();//其他的参数我们把它分装成一个Map对象  &#10;&#10;    public int getPageNo() {&#10;        return pageNo;&#10;    }&#10;&#10;    public void setPageNo(int pageNo) {&#10;        this.pageNo = pageNo;&#10;    }&#10;&#10;    public int getPageSize() {&#10;        return pageSize;&#10;    }&#10;&#10;    public void setPageSize(int pageSize) {&#10;        this.pageSize = pageSize;&#10;    }&#10;&#10;    public int getTotalRecord() {&#10;        return totalRecord;&#10;    }&#10;&#10;    public void setTotalRecord(int totalRecord) {&#10;        this.totalRecord = totalRecord;&#10;        //在设置总页数的时候计算出对应的总页数，在下面的三目运算中加法拥有更高的优先级，所以最后可以不加括号。  &#10;        int totalPage = totalRecord % pageSize == 0 ? totalRecord / pageSize : totalRecord / pageSize + 1;&#10;        this.setTotalPage(totalPage);&#10;    }&#10;&#10;    public int getTotalPage() {&#10;        return totalPage;&#10;    }&#10;&#10;    public void setTotalPage(int totalPage) {&#10;        this.totalPage = totalPage;&#10;    }&#10;&#10;    public List&lt;T&gt; getResults() {&#10;        return results;&#10;    }&#10;&#10;    public void setResults(List&lt;T&gt; results) {&#10;        this.results = results;&#10;    }&#10;&#10;    public Map&lt;String, Object&gt; getParams() {&#10;        return params;&#10;    }&#10;&#10;    public void setParams(Map&lt;String, Object&gt; params) {&#10;        this.params = params;&#10;    }&#10;&#10;    @Override&#10;    public String toString() {&#10;        StringBuilder s = new StringBuilder();&#10;        s.append(&quot;Page [pageNo=&quot;).append(pageNo).append(&quot;, pageSize=&quot;)&#10;                .append(pageSize).append(&quot;, results=&quot;).append(results).append(&#10;                &quot;, totalPage=&quot;).append(totalPage).append(&#10;                &quot;, totalRecord=&quot;).append(totalRecord).append(&quot;]&quot;);&#10;        return s.toString();&#10;    }&#10;}" description="Page&lt;T&gt; 分页实体类" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="maliyun" value="&lt;!-- maven 配置文件配置settings.xml中设置mirror节点 --&gt;&#10;&lt;mirror&gt;  &#10;    &lt;id&gt;nexus-aliyun&lt;/id&gt;  &#10;    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;    &#10;    &lt;name&gt;Nexus aliyun&lt;/name&gt;  &#10;    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;  &#10;&lt;/mirror&gt;&#10;&#10;&lt;!-- pom.xml 配置repository节点 复制代码 --&gt;&#10;&lt;repository&gt;&#10;    &lt;id&gt;nexus-aliyun&lt;/id&gt;&#10;    &lt;name&gt;Nexus aliyun&lt;/name&gt;&#10;    &lt;layout&gt;default&lt;/layout&gt;&#10;    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;&#10;    &lt;snapshots&gt;&#10;        &lt;enabled&gt;false&lt;/enabled&gt;&#10;    &lt;/snapshots&gt;&#10;    &lt;releases&gt;&#10;        &lt;enabled&gt;true&lt;/enabled&gt;&#10;    &lt;/releases&gt;&#10;&lt;/repository&gt;" description="maven repository for aliyun" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="mproperties" value="&lt;properties&gt;&#10;    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;&#10;    &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;&#10;    &lt;java.version&gt;1.8&lt;/java.version&gt;&#10;    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;&#10;    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;&#10;&lt;/properties&gt;" description="pom.xml for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mspringbookparent" value=" &lt;parent&gt;&#10;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10;    &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;&#10;    &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&#10;  &lt;/parent&gt;" description="sprintboot parent dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mspringbootpom2.3.5" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;&#10;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;&#10;    &lt;parent&gt;&#10;        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10;        &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;&#10;        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&#10;    &lt;/parent&gt;&#10;    &lt;groupId&gt;cn.webrx&lt;/groupId&gt;&#10;    &lt;artifactId&gt;demo&lt;/artifactId&gt;&#10;    &lt;version&gt;1.0&lt;/version&gt;&#10;    &lt;name&gt;demo&lt;/name&gt;&#10;    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;&#10;    &lt;properties&gt;&#10;        &lt;java.version&gt;15&lt;/java.version&gt;&#10;    &lt;/properties&gt;&#10;    &lt;dependencies&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;&#10;            &lt;version&gt;2.1.3&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;scope&gt;runtime&lt;/scope&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;            &lt;scope&gt;runtime&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;            &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#10;            &lt;scope&gt;test&lt;/scope&gt;&#10;            &lt;exclusions&gt;&#10;                &lt;exclusion&gt;&#10;                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;&#10;                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;&#10;                &lt;/exclusion&gt;&#10;            &lt;/exclusions&gt;&#10;        &lt;/dependency&gt;&#10;    &lt;/dependencies&gt;&#10;    &lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;&#10;&lt;/project&gt;&#10;" description="springboot 2.3.5 for maven pom.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="mshiro" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;&#10;    &lt;artifactId&gt;shiro-all&lt;/artifactId&gt;&#10;    &lt;version&gt;1.7.0&lt;/version&gt;&#10;    &lt;type&gt;pom&lt;/type&gt;&#10;&lt;/dependency&gt;" description="shiro dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mhikaricp" value="&lt;!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP --&gt;&#10;&lt;dependency&gt;&#10;    &lt;groupId&gt;com.zaxxer&lt;/groupId&gt;&#10;    &lt;artifactId&gt;HikariCP&lt;/artifactId&gt;&#10;    &lt;version&gt;3.4.5&lt;/version&gt;&#10;&lt;/dependency&gt;" description="HikariCP dependency for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+  <template name="mdbutils" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;commons-dbutils&lt;/groupId&gt;&#10;    &lt;artifactId&gt;commons-dbutils&lt;/artifactId&gt;&#10;    &lt;version&gt;1.7&lt;/version&gt;&#10;&lt;/dependency&gt;" description="apache commons dbutils for maven dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
+</templateSet>

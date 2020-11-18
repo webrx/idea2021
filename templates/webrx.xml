@@ -694,4 +694,9 @@
       <option name="MAVEN" value="true" />
     </context>
   </template>
+  <template name="mparent" value="&lt;parent&gt;&#10; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10; &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;&#10; &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&#10;&lt;/parent&gt;" description="springboot parent for maven" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="MAVEN" value="true" />
+    </context>
+  </template>
 </templateSet>

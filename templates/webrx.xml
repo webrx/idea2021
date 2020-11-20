@@ -709,4 +709,11 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="cookie" value="/**&#10; * 设置cookie&#10; * @param name&#10; * @param value&#10; * @param time&#10; */&#10;function setCookie(name,value,time){&#10;    let now = new Date();&#10;    now.setTime(now.getTime() + (time * 60 * 1000));&#10;    document.cookie = `${name}=${value}; expires=${now.toUTCString()}`;&#10;}&#10;&#10;/**&#10; * 判断cookie存在不存在，如果不存在返回false&#10; * @param name&#10; * @returns {boolean}&#10; */&#10;function existsCookie(name){&#10;    let flag = false;&#10;    let cs = document.cookie.split(&quot;; &quot;);&#10;    for(c of cs){&#10;        if(c.startsWith(name+&quot;=&quot;)){&#10;            flag = true;&#10;            break;&#10;        }&#10;    }&#10;    return flag;&#10;}&#10;&#10;/**&#10; * 删除指定cookie&#10; * @param name&#10; */&#10;function deleteCookie(name){&#10;    if(existsCookie(name)){&#10;        setCookie(name,0,-1);&#10;    }&#10;}&#10;&#10;&#10;/**&#10; * 读取如果没有参数，或参数不存在，则返回所有cookie,如果参数存在，则相关的值。&#10; * @param name&#10; * @returns {string}&#10; */&#10;function getCookie(name){&#10;    let cs = document.cookie.split(&quot;; &quot;);&#10;    let vv = cs.join(&quot;,&quot;);&#10;    for(c of cs){&#10;        if(c.startsWith(name+&quot;=&quot;)){&#10;            vv = c.substr(c.lastIndexOf(&quot;=&quot;)+1);&#10;            break;&#10;        }&#10;    }&#10;    return vv;&#10;}" description="javascript cookie functions" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
 </templateSet>

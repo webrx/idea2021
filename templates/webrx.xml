@@ -699,4 +699,14 @@
       <option name="MAVEN" value="true" />
     </context>
   </template>
+  <template name="rd" value="req.getRequestDispatcher(&quot;$END$&quot;).forward(req,resp);" description="req.getRequestDispatcher()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="rs" value="resp.sendRedirect(&quot;$END$&quot;);" description="resp.sendRedirect();" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>

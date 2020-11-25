@@ -716,4 +716,9 @@
       <option name="JSP" value="true" />
     </context>
   </template>
+  <template name="ld" value="//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME); 2020-11-25T08:27:22.0314087&#10;//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE); 2020-11-25&#10;//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME); 08:27:22.0470349&#10;//2020-11-25 08:27:22&#10;LocalDateTime.now().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;));" description="LocaleDateTime for java 8" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>

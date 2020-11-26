@@ -1,6 +1,7 @@
 <application>
   <component name="AppStorage">
     <histories>
+      <item value="exlude" />
       <item value="例外" />
       <item value="tail" />
       <item value="cookie" />
@@ -10,7 +11,7 @@
     <option name="languageScores">
       <map>
         <entry key="CHINESE" value="3" />
-        <entry key="ENGLISH" value="3" />
+        <entry key="ENGLISH" value="4" />
         <entry key="POLISH" value="1" />
       </map>
     </option>

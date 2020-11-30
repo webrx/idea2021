@@ -23,12 +23,6 @@
   <action id="Console.TableResult.CloneColumn" />
   <action id="Console.TableResult.MaximizeEditingCell" />
   <action id="DumpLookupElementWeights" />
-  <action id="EditorToggleShowBreadcrumbs">
-    <keyboard-shortcut first-keystroke="shift ctrl alt f8" />
-  </action>
-  <action id="EditorToggleShowGutterIcons">
-    <keyboard-shortcut first-keystroke="shift ctrl alt f7" />
-  </action>
   <action id="EditorToggleShowLineNumbers">
     <keyboard-shortcut first-keystroke="shift ctrl alt f6" />
   </action>
@@ -54,9 +48,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl alt equals" />
     <keyboard-shortcut first-keystroke="shift ctrl alt add" />
   </action>
-  <action id="ShowSettingsAndFindUsages" />
   <action id="TableResult.UnselectPreviousOccurrence" />
-  <action id="ToggleTemporaryLineBreakpoint" />
   <action id="UML.ShowChanges" />
   <action id="UnselectPreviousOccurrence" />
   <action id="UpdateRunningApplication" />

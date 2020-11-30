@@ -755,4 +755,10 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="vue" value="&lt;%@ page contentType=&quot;text/html;charset=utf-8&quot; language=&quot;java&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh-CN&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;title&gt;vue - helloworld&lt;/title&gt;&#10;    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;&#10;    &lt;style&gt;.ad{color:red;}&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;div id=&quot;app&quot;&gt;&#10;    {{ message|myf }}&#10;    &lt;h3&gt;{{ver}}&lt;/h3&gt;&#10;    &lt;h4&gt;{{ts}}&lt;/h4&gt;&#10;    &lt;button @click=&quot;alert(add(2,6));&quot;&gt;计算2+6的和&lt;/button&gt;&#10;    &lt;button v-on:click=&quot;alert(add(19,19))&quot; v-bind:title=&quot;'hello19+19'&quot; :class=&quot;'ad'&quot;&gt;计算19+19的和&lt;/button&gt;&#10;&lt;/div&gt;&#10;&lt;script&gt;&#10;    let v = new Vue({&#10;        el: '#app',&#10;        data: {&#10;            message: 'hello world ' + Vue.version,&#10;            ts: 'aaaa'&#10;        },&#10;        methods: {&#10;            add: function (a, b) {&#10;                return a + b;&#10;            }&#10;        },&#10;        created: function () {&#10;            setInterval(() =&gt; {&#10;                let d = new Date();&#10;                this.ts = `\${d.getHours()}:\${d.getMinutes()}:\${d.getSeconds()}`;&#10;            }, 1000);&#10;        },&#10;        computed: {&#10;            ver: function () {&#10;                return Vue.version;&#10;            }&#10;        },&#10;        filters: {&#10;            myf(a){&#10;                return a.replace('hello','Hello Vue');&#10;            }&#10;        }&#10;    });&#10;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" description="vue for jsp file example." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
 </templateSet>

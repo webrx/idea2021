@@ -319,7 +319,7 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
-  <template name="test" value="@Test&#10;public void test(){&#10;    &#10;}" description="junit test function" toReformat="false" toShortenFQNames="true">
+  <template name="test" value="@Test&#10;public void test(){&#10;    System.out.println(System.getProperty(&quot;java.version&quot;));&#10;    System.out.println(System.getProperty(&quot;java.home&quot;));&#10;    System.out.println(System.getProperty(&quot;os.name&quot;));&#10;    $END$;&#10;}" description="junit test function" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
     </context>

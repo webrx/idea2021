@@ -761,4 +761,10 @@
       <option name="JSP" value="true" />
     </context>
   </template>
+  <template name="downloadfile" value="//文件实现下载&#10;String path = req.getServletContext().getRealPath(&quot;/WEB-INF/down/美女.jpg&quot;);&#10;File file = new File(path);&#10;FileInputStream fis = new FileInputStream(file);&#10;byte[] buf = fis.readAllBytes();&#10;fis.close();&#10;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyyMMddHHmmss&quot;);&#10;String downname = sdf.format(new Date()) + path.toLowerCase().substring(path.lastIndexOf(&quot;.&quot;));&#10;// 清空response&#10;resp.reset();&#10;// 设置response的Header&#10;resp.addHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot; + downname);&#10;resp.addHeader(&quot;Content-Length&quot;, String.format(&quot;%d&quot;, file.length()));&#10;resp.setContentType(&quot;application/octet-stream&quot;);&#10;OutputStream os = resp.getOutputStream();&#10;os.write(buf);&#10;os.flush();&#10;os.close();" description="java servlet实现文件下载" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
 </templateSet>

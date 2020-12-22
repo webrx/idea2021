@@ -2517,6 +2517,11 @@
                       <FeaturePluginData displayName="AspectJ" pluginName="AspectJ" pluginId="com.intellij.aspectj" />
                     </value>
                   </entry>
+                  <entry key="JRebel">
+                    <value>
+                      <FeaturePluginData displayName="JRebel" pluginName="JRebel and XRebel for IntelliJ" pluginId="JRebelPlugin" />
+                    </value>
+                  </entry>
                   <entry key="NBMindMap">
                     <value>
                       <FeaturePluginData displayName="NB Mind Map" pluginName="IDEA Mind Map" pluginId="nb-mind-map-idea" />

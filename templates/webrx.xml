@@ -228,7 +228,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="jsp" value="&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;utf-8&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh-CN&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#10;    &lt;title&gt;jsp-title&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="jsp example file" toReformat="false" toShortenFQNames="true">
+  <template name="jsp" value="&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;utf-8&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh-CN&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;title&gt;jsp-title&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" description="jsp example file" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JSP" value="true" />
     </context>
@@ -319,7 +319,7 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
-  <template name="test" value="@Test&#10;public void test(){&#10;    System.out.println(System.getProperty(&quot;java.version&quot;));&#10;    System.out.println(System.getProperty(&quot;java.home&quot;));&#10;    System.out.println(System.getProperty(&quot;os.name&quot;));&#10;    $END$;&#10;}" description="junit test function" toReformat="false" toShortenFQNames="true">
+  <template name="test" value="@Test&#10;public void test(){&#10;    &#10;}" description="junit test function" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
     </context>
@@ -697,79 +697,6 @@
   <template name="mparent" value="&lt;parent&gt;&#10; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;&#10; &lt;version&gt;2.3.5.RELEASE&lt;/version&gt;&#10; &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&#10;&lt;/parent&gt;" description="springboot parent for maven" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="MAVEN" value="true" />
-    </context>
-  </template>
-  <template name="rd" value="req.getRequestDispatcher(&quot;$END$&quot;).forward(req,resp);" description="req.getRequestDispatcher()" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_CODE" value="true" />
-    </context>
-  </template>
-  <template name="rs" value="resp.sendRedirect(&quot;$END$&quot;);" description="resp.sendRedirect();" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_CODE" value="true" />
-    </context>
-  </template>
-  <template name="cookie" value="/**&#10; * 设置cookie&#10; * @param name&#10; * @param value&#10; * @param time&#10; */&#10;function setCookie(name,value,time){&#10;    let now = new Date();&#10;    now.setTime(now.getTime() + (time * 60 * 1000));&#10;    document.cookie = `${name}=${value}; expires=${now.toUTCString()}`;&#10;}&#10;&#10;/**&#10; * 判断cookie存在不存在，如果不存在返回false&#10; * @param name&#10; * @returns {boolean}&#10; */&#10;function existsCookie(name){&#10;    let flag = false;&#10;    let cs = document.cookie.split(&quot;; &quot;);&#10;    for(c of cs){&#10;        if(c.startsWith(name+&quot;=&quot;)){&#10;            flag = true;&#10;            break;&#10;        }&#10;    }&#10;    return flag;&#10;}&#10;&#10;/**&#10; * 删除指定cookie&#10; * @param name&#10; */&#10;function deleteCookie(name){&#10;    if(existsCookie(name)){&#10;        setCookie(name,0,-1);&#10;    }&#10;}&#10;&#10;&#10;/**&#10; * 读取如果没有参数，或参数不存在，则返回所有cookie,如果参数存在，则相关的值。&#10; * @param name&#10; * @returns {string}&#10; */&#10;function getCookie(name){&#10;    let cs = document.cookie.split(&quot;; &quot;);&#10;    let vv = cs.join(&quot;,&quot;);&#10;    for(c of cs){&#10;        if(c.startsWith(name+&quot;=&quot;)){&#10;            vv = c.substr(c.lastIndexOf(&quot;=&quot;)+1);&#10;            break;&#10;        }&#10;    }&#10;    return vv;&#10;}" description="javascript cookie functions" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="HTML" value="true" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="ld" value="//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME); 2020-11-25T08:27:22.0314087&#10;//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE); 2020-11-25&#10;//LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME); 08:27:22.0470349&#10;//2020-11-25 08:27:22&#10;LocalDateTime.now().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;));" description="LocaleDateTime for java 8" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_CODE" value="true" />
-    </context>
-  </template>
-  <template name="druidprop" value="druid.driverClassName=com.mysql.cj.jdbc.Driver&#10;druid.url=jdbc:mysql://localhost:3306/appdb?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=PRC&#10;druid.username=root&#10;druid.password=KtxBNG6lwkbDOhtTGV2c5OkyhL5mJ18R1MusC+hp7bPFItytpaB7tBYYEbjp99E/w4WzkQixtT24sUPSZpGMPA==&#10;druid.initialSize=20&#10;druid.filters=config,wall,stat&#10;connectionProperties=config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJbduJFIoETX0NjZZ/5Vjbo0O34pEuAFqlp4DtwYmHmlEaz+jf/sOBRwDttxBb8XIBmI+WCu0EARYVxlZhMkX6sCAwEAAQ==&#10;druid.maxActive=300&#10;druid.maxWait=60000" description="druid db.properties" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="ANY_OPENAPI_JSON_FILE" value="false" />
-      <option name="ANY_OPENAPI_YAML_FILE" value="false" />
-      <option name="ASPECTJ" value="false" />
-      <option name="CSS" value="false" />
-      <option name="CUCUMBER_FEATURE_FILE" value="false" />
-      <option name="CoffeeScript" value="false" />
-      <option name="ECMAScript6" value="false" />
-      <option name="GENERAL_JSON_FILE" value="false" />
-      <option name="GENERAL_YAML_FILE" value="false" />
-      <option name="GROOVY" value="false" />
-      <option name="HAML" value="false" />
-      <option name="HTML" value="false" />
-      <option name="JAVA_CODE" value="false" />
-      <option name="JAVA_SCRIPT" value="false" />
-      <option name="JSON" value="false" />
-      <option name="JSP" value="false" />
-      <option name="KOTLIN" value="false" />
-      <option name="MAVEN" value="false" />
-      <option name="OTHER" value="true" />
-      <option name="PL/SQL" value="false" />
-      <option name="REQUEST" value="false" />
-      <option name="SHELL_SCRIPT" value="false" />
-      <option name="SQL" value="false" />
-      <option name="TypeScript" value="false" />
-      <option name="XML" value="false" />
-    </context>
-  </template>
-  <template name="druidDbUtil" value="/**&#10; * &lt;p&gt;功能描述: &lt;/p&gt;&#10; *&#10; * @author webrx&#10; * @version 1.0&#10; * @date 2020-11-24 14:18&#10; */&#10;public class DbUtil {&#10;    static DruidDataSource dataSource;&#10;    static QueryRunner run;&#10;    static {&#10;        Properties p = new Properties();&#10;        try {&#10;            //src/main/resources/db.properties那个文件&#10;            p.load(Thread.currentThread().getContextClassLoader().getResourceAsStream(&quot;db.properties&quot;));&#10;            dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(p);&#10;            run = new QueryRunner(dataSource);&#10;        } catch (IOException e) {&#10;            e.printStackTrace();&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;        }&#10;    }&#10;&#10;    public static Connection getConnection() {&#10;        try {&#10;            return dataSource.getConnection();&#10;        } catch (SQLException e) {&#10;            e.printStackTrace();&#10;        }&#10;        return null;&#10;    }&#10;&#10;    public int count(String sql,Object...params){&#10;        int result = 0;&#10;        try {&#10;            long res = run.query(sql,new ScalarHandler&lt;&gt;(),params);&#10;            result = (int)res;&#10;        } catch (SQLException throwables) {&#10;            throwables.printStackTrace();&#10;        }&#10;        return result;&#10;    }&#10;&#10;    public Map&lt;String,Object&gt; find(String sql,Object...params){&#10;        Map&lt;String,Object&gt; map = null;&#10;        try {&#10;            map = run.query(sql,new MapHandler(),params);&#10;        } catch (SQLException throwables) {&#10;            throwables.printStackTrace();&#10;        }&#10;        return map;&#10;    }&#10;&#10;    public List&lt;Map&lt;String,Object&gt;&gt; query(String sql,Object...params){&#10;        List&lt;Map&lt;String,Object&gt;&gt; list = null;&#10;        try {&#10;            list = run.query(sql,new MapListHandler(),params);&#10;        } catch (SQLException throwables) {&#10;            throwables.printStackTrace();&#10;        }&#10;        return list;&#10;    }&#10;&#10;    public int update(String sql,Object...params){&#10;        int result = 0;&#10;        try {&#10;            result = run.update(sql,params);&#10;        } catch (SQLException throwables) {&#10;            throwables.printStackTrace();&#10;        }&#10;        return result;&#10;    }&#10;&#10;    public static void colse() {&#10;        dataSource.close();&#10;    }&#10;}" description="DbUtil for druid db.proerptes commons-dbutils" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_CODE" value="true" />
-    </context>
-  </template>
-  <template name="vue" value="&lt;%@ page contentType=&quot;text/html;charset=utf-8&quot; language=&quot;java&quot; %&gt;&#10;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;zh-CN&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#10;    &lt;title&gt;vue - helloworld&lt;/title&gt;&#10;    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;&#10;    &lt;style&gt;.ad{color:red;}&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;div id=&quot;app&quot;&gt;&#10;    {{ message|myf }}&#10;    &lt;h3&gt;{{ver}}&lt;/h3&gt;&#10;    &lt;h4&gt;{{ts}}&lt;/h4&gt;&#10;    &lt;button @click=&quot;alert(add(2,6));&quot;&gt;计算2+6的和&lt;/button&gt;&#10;    &lt;button v-on:click=&quot;alert(add(19,19))&quot; v-bind:title=&quot;'hello19+19'&quot; :class=&quot;'ad'&quot;&gt;计算19+19的和&lt;/button&gt;&#10;&lt;/div&gt;&#10;&lt;script&gt;&#10;    let v = new Vue({&#10;        el: '#app',&#10;        data: {&#10;            message: 'hello world ' + Vue.version,&#10;            ts: 'aaaa'&#10;        },&#10;        methods: {&#10;            add: function (a, b) {&#10;                return a + b;&#10;            }&#10;        },&#10;        created: function () {&#10;            setInterval(() =&gt; {&#10;                let d = new Date();&#10;                this.ts = `\${d.getHours()}:\${d.getMinutes()}:\${d.getSeconds()}`;&#10;            }, 1000);&#10;        },&#10;        computed: {&#10;            ver: function () {&#10;                return Vue.version;&#10;            }&#10;        },&#10;        filters: {&#10;            myf(a){&#10;                return a.replace('hello','Hello Vue');&#10;            }&#10;        }&#10;    });&#10;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" description="vue for jsp file example." toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="HTML" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="downloadfile" value="//文件实现下载&#10;String path = req.getServletContext().getRealPath(&quot;/WEB-INF/down/美女.jpg&quot;);&#10;File file = new File(path);&#10;FileInputStream fis = new FileInputStream(file);&#10;byte[] buf = fis.readAllBytes();&#10;fis.close();&#10;SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyyMMddHHmmss&quot;);&#10;String downname = sdf.format(new Date()) + path.toLowerCase().substring(path.lastIndexOf(&quot;.&quot;));&#10;// 清空response&#10;resp.reset();&#10;// 设置response的Header&#10;resp.addHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot; + downname);&#10;resp.addHeader(&quot;Content-Length&quot;, String.format(&quot;%d&quot;, file.length()));&#10;resp.setContentType(&quot;application/octet-stream&quot;);&#10;OutputStream os = resp.getOutputStream();&#10;os.write(buf);&#10;os.flush();&#10;os.close();" description="java servlet实现文件下载" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_CODE" value="true" />
-      <option name="JSP" value="true" />
-    </context>
-  </template>
-  <template name="logbacktest" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;configuration scan=&quot;true&quot; scanPeriod=&quot;1 seconds&quot; debug=&quot;false&quot;&gt;&#10;    &lt;property name=&quot;appname&quot; value=&quot;ueditor2&quot;/&gt;&#10;    &lt;!--配置日志的输出目录根目录，这里appName为我们的工程名称，自己根据实际修改--&gt;&#10;    &lt;property name=&quot;logBase&quot; value=&quot;C:/ueditor2/logs/&quot;/&gt;&#10;&#10;&#10;    &lt;!-- ch.qos.logback.core.ConsoleAppender 控制台输出 --&gt;&#10;    &lt;appender name=&quot;sout&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;&#10;        &lt;encoder&gt;&#10;            &lt;!-- %caller{1} --&gt;&#10;            &lt;!-- %replace(%caller{1}){'\t|Caller.{1}0| at|\b|\r\n', ''} --&gt;&#10;            &lt;!-- %logger{36} --&gt;&#10;            &lt;!-- %L --&gt;&#10;            &lt;!-- [%thread] --&gt;&#10;            &lt;pattern&gt;[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %replace(%caller{1}){'\t|Caller.{1}0| at|\b|\r\n', ''} - %msg%n&lt;/pattern&gt;&#10;        &lt;/encoder&gt;&#10;    &lt;/appender&gt;&#10;&#10;    　&#10;    &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.FileAppender&quot;&gt;&#10;        &lt;file&gt;${logBase}user.log&lt;/file&gt;&#10;        &lt;append&gt;true&lt;/append&gt;&#10;        &lt;encoder&gt;　&#10;            &lt;pattern&gt;%-4relative [%thread] %-5level %logger{35} - %msg%n&lt;/pattern&gt;　&#10;        &lt;/encoder&gt;&#10;    &lt;/appender&gt;&#10;&#10;    &lt;!-- 最近31天日志记录， --&gt;&#10;    &lt;appender name=&quot;file30&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;&#10;        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;&#10;            &lt;fileNamePattern&gt;${logBase}user.%d{yyyyMMdd}.txt&lt;/fileNamePattern&gt;&#10;            &lt;maxHistory&gt;30&lt;/maxHistory&gt;&#10;        &lt;/rollingPolicy&gt;&#10;        &lt;encoder&gt;&#10;            &lt;pattern&gt;[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %replace(%caller{1}){'\t|Caller.{1}0| at|\b|\r\n', ''} - %msg%n&lt;/pattern&gt;&#10;        &lt;/encoder&gt;&#10;    &lt;/appender&gt;&#10;&#10;&#10;    &lt;appender name=&quot;f&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;&#10;        &lt;file&gt;${logBase}test.log&lt;/file&gt;&#10;        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.FixedWindowRollingPolicy&quot;&gt;&#10;            &lt;fileNamePattern&gt;${logBase}tests.%i.log.zip&lt;/fileNamePattern&gt;&#10;            &lt;minIndex&gt;1&lt;/minIndex&gt;&#10;            &lt;maxIndex&gt;3&lt;/maxIndex&gt;&#10;        &lt;/rollingPolicy&gt;&#10;&#10;        &lt;triggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy&quot;&gt;&#10;            &lt;!-- 5MB --&gt;&#10;            &lt;maxFileSize&gt;2KB&lt;/maxFileSize&gt;&#10;        &lt;/triggeringPolicy&gt;&#10;        &lt;encoder&gt;&#10;            &lt;pattern&gt;%-4relative [%thread] %-5level %logger{35} - %msg%n&lt;/pattern&gt;&#10;        &lt;/encoder&gt;&#10;    &lt;/appender&gt;&#10;&#10;    &lt;!-- name指定包名，level 级别 --&gt;&#10;    &lt;logger name=&quot;cn.webrx.servlet&quot; level=&quot;ALL&quot;/&gt;&#10;    &lt;logger name=&quot;cn.webrx.Book&quot; level=&quot;DEBUG&quot;/&gt;&#10;&#10;    &lt;!-- 日志级别 ALL INFO ERROR DEBUG TRACE OFF --&gt;&#10;    &lt;root&gt;&#10;        &lt;level value=&quot;ALL&quot;/&gt;&#10;        &lt;appender-ref ref=&quot;sout&quot;/&gt;&#10;        &lt;appender-ref ref=&quot;f&quot;/&gt;&#10;        &lt;!-- &lt;appender-ref ref=&quot;FILE&quot;/&gt; --&gt;&#10;    &lt;/root&gt;&#10;&lt;/configuration&gt;" description="logback-test.xml" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="XML" value="true" />
     </context>
   </template>
 </templateSet>

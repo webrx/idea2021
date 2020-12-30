@@ -1,0 +1,5 @@
+<keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="ViewMainMenu">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f1" />
+  </action>
+</keymap>

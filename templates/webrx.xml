@@ -772,4 +772,9 @@
       <option name="XML" value="true" />
     </context>
   </template>
+  <template name="sc" value="Scanner sc = new Scanner(System.in);&#10;$END$" description="new Scanner(System.in)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>

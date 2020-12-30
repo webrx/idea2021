@@ -1,0 +1,7 @@
+<templateSet group="zhangsan">
+  <template name="w4" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;&#10;         version=&quot;4.0&quot;&gt;&#10;&lt;/web-app&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,4 +1,12 @@
 <keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl alt d" />
+  </action>
+  <action id="CodeCompletion">
+    <keyboard-shortcut first-keystroke="ctrl space" />
+    <keyboard-shortcut first-keystroke="alt slash" />
+  </action>
+  <action id="Console.TableResult.CloneColumn" />
   <action id="EditorToggleShowBreadcrumbs">
     <keyboard-shortcut first-keystroke="shift ctrl alt f4" />
   </action>
@@ -8,9 +16,11 @@
   <action id="EditorToggleShowLineNumbers">
     <keyboard-shortcut first-keystroke="shift ctrl alt f5" />
   </action>
+  <action id="HippieCompletion" />
   <action id="RevealIn">
     <keyboard-shortcut first-keystroke="shift ctrl alt f9" />
   </action>
+  <action id="UML.ShowChanges" />
   <action id="ViewMainMenu">
     <keyboard-shortcut first-keystroke="shift ctrl alt f1" />
   </action>

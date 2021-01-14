@@ -6,6 +6,9 @@
     <driver id="clickhouse">
       <option name="auto-sync" value="true" />
     </driver>
+    <driver id="couchbase_query">
+      <option name="auto-sync" value="true" />
+    </driver>
     <driver id="db2.11">
       <option name="auto-sync" value="false" />
     </driver>
@@ -69,7 +72,7 @@
     </driver>
     <driver id="mysql.8">
       <remarks>localhost</remarks>
-      <url-template name="mysql" template="jdbc:mysql://localhost:3306/?serverTimezone=PRC" />
+      <url-template name="mysql" template="jdbc:mysql:/wxdb?serverTimezone=PRC" />
       <artifact use="false" />
       <option name="auto-sync" value="true" />
       <option name="auto-commit" value="true" />
@@ -78,7 +81,7 @@
       <option name="source-loading" value="USER_SOURCES" />
       <option name="schema-control" value="AUTOMATIC" />
       <library>
-        <url>file://F:/javaftp/soft/mysql-connector-java-8.0.21.jar</url>
+        <url>file://$APPLICATION_HOME_DIR$/mysql-connector-java-8.0.22.jar</url>
       </library>
     </driver>
     <driver id="mysql">
@@ -86,6 +89,10 @@
     </driver>
     <driver id="mysql_aurora">
       <option name="auto-sync" value="true" />
+    </driver>
+    <driver id="oracle.19">
+      <option name="auto-sync" value="true" />
+      <option name="auto-commit" value="false" />
     </driver>
     <driver id="oracle">
       <option name="auto-sync" value="true" />
@@ -149,6 +156,14 @@
       <option name="schema-control" value="AUTOMATIC" />
     </driver>
     <driver id="c7b36dcf-ed66-4964-81e4-fced2f1701a6" name="User Driver [5]" driver-class="java.sql.Driver">
+      <option name="auto-commit" value="true" />
+      <option name="auto-sync" value="true" />
+      <option name="format-sources-on-sync" value="true" />
+      <option name="send-app-info" value="true" />
+      <option name="source-loading" value="USER_SOURCES" />
+      <option name="schema-control" value="AUTOMATIC" />
+    </driver>
+    <driver id="41fbf6dc-863c-4581-9798-a04bfaf27e65" name="User Driver [6]" driver-class="java.sql.Driver">
       <option name="auto-commit" value="true" />
       <option name="auto-sync" value="true" />
       <option name="format-sources-on-sync" value="true" />

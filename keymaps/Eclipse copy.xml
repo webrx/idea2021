@@ -15,6 +15,10 @@
   <action id="Console.TableResult.CloneColumn" />
   <action id="Console.TableResult.DeleteRows" />
   <action id="Console.TableResult.MaximizeEditingCell" />
+  <action id="CopyElement">
+    <keyboard-shortcut first-keystroke="shift ctrl alt c" />
+  </action>
+  <action id="CopyReference" />
   <action id="Diff.ShowDiff" />
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="shift ctrl e" />
@@ -37,10 +41,14 @@
   </action>
   <action id="ExtractFunctionToScope" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="GotoSymbol" />
   <action id="HippieCompletion" />
   <action id="Kotlin.RunScratch" />
   <action id="NavBar-navigate">
     <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="NewClass">
+    <keyboard-shortcut first-keystroke="shift ctrl alt n" />
   </action>
   <action id="OpenModuleSettings">
     <keyboard-shortcut first-keystroke="shift ctrl e" />

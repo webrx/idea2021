@@ -1,0 +1,79 @@
+<keymap version="1" name="Eclipse copy" parent="Eclipse">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl alt d" />
+  </action>
+  <action id="ActivateMavenToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl alt m" />
+  </action>
+  <action id="CloseProject">
+    <keyboard-shortcut first-keystroke="ctrl alt w" />
+  </action>
+  <action id="CodeCompletion">
+    <keyboard-shortcut first-keystroke="alt slash" />
+  </action>
+  <action id="CompareTwoFiles" />
+  <action id="Console.TableResult.CloneColumn" />
+  <action id="Console.TableResult.DeleteRows" />
+  <action id="Console.TableResult.MaximizeEditingCell" />
+  <action id="Diff.ShowDiff" />
+  <action id="EditSource">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="EditorDeleteLine" />
+  <action id="EditorDuplicate">
+    <keyboard-shortcut first-keystroke="ctrl d" />
+  </action>
+  <action id="EditorToggleShowBreadcrumbs">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f8" />
+  </action>
+  <action id="EditorToggleShowGutterIcons">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f6" />
+  </action>
+  <action id="EditorToggleShowLineNumbers">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f5" />
+  </action>
+  <action id="ExternalSystem.OpenConfig">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="ExtractFunctionToScope" />
+  <action id="FileChooser.GotoDesktop" />
+  <action id="HippieCompletion" />
+  <action id="Kotlin.RunScratch" />
+  <action id="NavBar-navigate">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="OpenModuleSettings">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="ProjectViewEditSource">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="RemoteHostView.EditSource">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="RevealIn">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f9" />
+  </action>
+  <action id="RunClass">
+    <keyboard-shortcut first-keystroke="shift ctrl f10" />
+    <keyboard-shortcut first-keystroke="f12" />
+  </action>
+  <action id="SendEOF" />
+  <action id="Sql.EditParameter">
+    <keyboard-shortcut first-keystroke="shift ctrl e" />
+  </action>
+  <action id="ToggleTemporaryLineBreakpoint" />
+  <action id="UML.ShowChanges" />
+  <action id="ViewMainMenu">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f1" />
+  </action>
+  <action id="ViewStatusBar">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f3" />
+  </action>
+  <action id="ViewToolBar">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f2" />
+  </action>
+  <action id="ViewToolButtons">
+    <keyboard-shortcut first-keystroke="shift ctrl alt f4" />
+  </action>
+</keymap>
